@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475d8d7ed9646504888a5702b5d7ed33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: The Rock
+  unitName: Human
   unitLevel: 2
   ATK: 20
   maxHP: 30
@@ -59,6 +59,7 @@ MonoBehaviour:
   lenghtCD1: 0
   lenghtCD2: 0
   lenghtCD3: 0
+  isResetTTD: 0
 --- !u!1 &5492376629917588543
 GameObject:
   m_ObjectHideFlags: 0
