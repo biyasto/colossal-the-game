@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BattleState { START, PLAYER1TURN, PLAYER2TURN, WON, LOST }
+public enum BattleState { START, PLAYER1TURN, PLAYER2TURN, END }
 
 public class BattleSystem : MonoBehaviour
 {
@@ -23,6 +23,8 @@ public class BattleSystem : MonoBehaviour
 	public BattleHUD player2HUD;
 
 	public BattleState state;
+	public Unit curPlayer;
+	public Unit curEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +36,11 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator SetupBattle()
 	{
-		GameObject playerGO = Instantiate(player1Prefab, player1BattleStation);
-		player1Unit = playerGO.GetComponent<Unit>();
+		GameObject player1GO = Instantiate(player1Prefab, player1BattleStation);
+		player1Unit = player1GO.GetComponent<Unit>();
 
-		GameObject enemyGO = Instantiate(player2Prefab, player2BattleStation);
-		player2Unit = enemyGO.GetComponent<Unit>();
+		GameObject player2GO = Instantiate(player2Prefab, player2BattleStation);
+		player2Unit = player2GO.GetComponent<Unit>();
 
 		
 
@@ -48,35 +50,26 @@ public class BattleSystem : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.PLAYER1TURN;
-		Player1Turn();
+		PlayerTurn();
 	}
 
 	IEnumerator PlayerAttack()
 	{
 		bool isDead;
-		Unit currPlayer,currEnemy;
-		if (state == BattleState.PLAYER1TURN)
-		{
-			currPlayer = player1Unit;
-			currEnemy = player2Unit;
-		}
-		else
-		{
-			currPlayer = player2Unit;
-			currEnemy = player1Unit;
-		}
+	
 		{
 			//player1Unit.Heal(10);
 			//player1HUD.SetHP(player1Unit.currentHP);
-			isDead = currEnemy.TakeDamage(currPlayer.ATK);
+			isDead = curEnemy.TakeDamage(curPlayer.ATK);
 			SetHubBar();
+			resetText(); yield return new WaitForSeconds(0.5f);
 			dialogueText.text = "The attack is successful!";
 
 			yield return new WaitForSeconds(2f);
 
 			
 			if (!isDead) yield break;
-			state = BattleState.WON;
+			state = BattleState.END;
 			EndBattle();
 		}
 		
@@ -86,30 +79,23 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator PlayerMove2()
 	{
 		bool isDead;
-		Unit currPlayer,currEnemy;
-		if (state == BattleState.PLAYER1TURN)
-		{
-			currPlayer = player1Unit;
-			currEnemy = player2Unit;
-		}
-		else
-		{
-			currPlayer = player2Unit;
-			currEnemy = player1Unit;
-		}
+
 
 		{
 			isDead = false;
-			if(!currPlayer.useAP(15)) 
+			if(!curPlayer.useAP(15)) 
 			{
+				resetText(); yield return new WaitForSeconds(0.5f);
 				dialogueText.text = "You dont have enough Mana!";
 			}
 			else
 			{
-				currPlayer.Heal(5);
+				curPlayer.Heal(5);
 				SetHubBar();
-				currPlayer.changePRT(20);
+				curPlayer.changePRT(20);
 				//player2HUD.SetHP(player2Unit.currentHP);
+				resetText(); yield return new WaitForSeconds(0.5f);
+				
 				dialogueText.text = "The heal is successful!";
 			}
 
@@ -117,14 +103,18 @@ public class BattleSystem : MonoBehaviour
 
 			
 			if (!isDead) yield break;
-			state = BattleState.WON;
+			state = BattleState.END;
 			EndBattle();
 		}
 		
 		
 	}
 
-
+	void resetText()
+	{
+		dialogueText.text = "";
+		
+	}
 	void SetHubBar()
 	{
 		player1HUD.SetHP(player1Unit.currentHP);
@@ -134,30 +124,35 @@ public class BattleSystem : MonoBehaviour
 	}
 	void EndBattle()
 	{
-		if(state == BattleState.WON)
+		if(state == BattleState.END)
 		{
-			dialogueText.text = "You won the battle!";
-		} else if (state == BattleState.LOST)
-		{
-			dialogueText.text = "You were defeated.";
+			dialogueText.text =curPlayer.unitName+ " won! Fatality!";
 		}
 	}
 
-	void Player2Turn()
+	void PlayerTurn()
 	{
-		dialogueText.text = "Player 2's turn!";
+		if (state == BattleState.PLAYER1TURN) 
+		{	
+			curPlayer = player1Unit;
+			curEnemy = player2Unit;
+		}	
+		else
+		{	
+			curPlayer = player2Unit;
+			curEnemy = player1Unit;
+		}
+		dialogueText.text = curPlayer.unitName +"'s turn!";
 
 	}
-	void Player1Turn()
-	{
-		dialogueText.text = "Player 1's turn:";
-	}
+
 
 	IEnumerator PlayerEndTurn()
 	{ 
 		
-		if (state == BattleState.PLAYER1TURN) {state = BattleState.PLAYER2TURN; Player2Turn();}
-		else if (state == BattleState.PLAYER2TURN) {state = BattleState.PLAYER1TURN;Player1Turn();}
+		if (state == BattleState.PLAYER1TURN) {state = BattleState.PLAYER2TURN;}
+		else if (state == BattleState.PLAYER2TURN) {state = BattleState.PLAYER1TURN;}
+		PlayerTurn();
 		yield return new WaitForSeconds(2f);
 	
 	}
