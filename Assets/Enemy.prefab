@@ -46,9 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: The Rock
   unitLevel: 2
-  damage: 5
+  ATK: 20
   maxHP: 30
   currentHP: 20
+  maxAP: 100
+  currentAP: 75
+  PRT: 90
+  TTD: 0
+  currentCD1: 0
+  currentCD2: 0
+  currentCD3: 0
+  lenghtCD1: 0
+  lenghtCD2: 0
+  lenghtCD3: 0
 --- !u!1 &5492376629917588543
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +104,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
