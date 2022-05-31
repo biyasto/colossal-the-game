@@ -54,8 +54,9 @@
   <ItemGroup>
      <Compile Include="Assets\BattleSystem.cs" />
      <Compile Include="Assets\Unit.cs" />
-     <Compile Include="Assets\BattleHUD.cs" />
      <Compile Include="Assets\MoveSet.cs" />
+     <Compile Include="Assets\BattleHUD.cs" />
+     <Compile Include="Assets\MoveSetCharacter.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
      <None Include="Assets\Mirror\Version.txt" />
