@@ -52,8 +52,7 @@ MonoBehaviour:
   maxHp: 100
   currentHp: 80
   maxAP: 100
-  currentAP: 75
-  prt: 0
+  prt: 10
   ttd: 0
   emeny: {fileID: 0}
   isResetTTD: 0
@@ -71,8 +70,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cd1Max: 1
   cd2Max: 1
-  cd3Max: 1
   cdUltMax: 1
+  moveName1: 
+  moveName2: 
+  moveNameUlt: 
 --- !u!1 &5492376629917588543
 GameObject:
   m_ObjectHideFlags: 0

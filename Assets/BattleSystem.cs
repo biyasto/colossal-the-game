@@ -72,7 +72,7 @@ public class BattleSystem : MonoBehaviour
         if (!curPlayer.moveset.Move1())
         {
             yield return new WaitForSeconds(0.1f);
-            dialogueText.text = "The Move was in Cooldown";
+            dialogueText.text = curPlayer.moveset.moveName1+" was in Cooldown";
         }
         else
         {
@@ -152,7 +152,7 @@ public class BattleSystem : MonoBehaviour
             curEnemy = _player1Unit;
         }
 
-        curPlayer.isResetTTD = true;
+        curPlayer.emeny.isResetTTD = true;
         curPlayer.moveset.ReduceCd();
         dialogueText.text = curPlayer.unitName + "'s turn!";
     }
@@ -167,7 +167,7 @@ public class BattleSystem : MonoBehaviour
         }
         else if (state == BattleState.PLAYER2TURN)
         {
-            if(_player1Unit.isResetTTD) _player1Unit.resetTTD();
+            if(_player1Unit.isResetTTD) _player1Unit.resetTTD(); 
             state = BattleState.PLAYER1TURN;
         }
 

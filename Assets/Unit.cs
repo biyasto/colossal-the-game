@@ -17,7 +17,6 @@ public class Unit : MonoBehaviour
 	public int currentHp;
 	
 	public int maxAP;
-	public int currentAP;
 	public int prt;
 
 	public int ttd;
@@ -65,10 +64,6 @@ public class Unit : MonoBehaviour
 	public void setHP(int amount)
 	{
 		currentHp = amount > maxHp ? maxHp : amount;
-	}
-	public void setAP(int amount)
-	{
-		currentAP = amount > maxAP ? maxAP : amount;
 	}
 	public void setPRT(int amount)
 	{

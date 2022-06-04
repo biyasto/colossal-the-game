@@ -2,104 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8de09db3-5945-4b8c-b582-38e41c35f0d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MoveSetCharacter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MoveSetCharacter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/CHANGELOG.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/CONTRIBUTING.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/LICENSE.md.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Discovery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Discovery.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/EditorPluginInterop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/EditorPluginInterop.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/LoggingLevel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/LoggingLevel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PluginSettings.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PostProcessors.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PostProcessors/RiderAssetPostprocessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/PostProcessors/RiderAssetPostprocessor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/AssemblyNameProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/AssemblyNameProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/FileIOProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/FileIOProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/GUIDProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/GUIDProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IAssemblyNameProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IAssemblyNameProvider.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IFileIO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IFileIO.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IGUIDGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IGUIDGenerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/IGenerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/ProjectGeneration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/ProjectGeneration.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/ProjectGenerationFlag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/ProjectGenerationFlag.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/SolutionGuidGenerator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/ProjectGeneration/SolutionGuidGenerator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Properties.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Properties/AssemblyInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderFileSystemWatcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderFileSystemWatcher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderInitializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderInitializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditorData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/RiderScriptEditorData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/CallbackData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/CallbackData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/CallbackInitializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/CallbackInitializer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/RiderTestRunner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/RiderTestRunner.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/SyncTestRunCallback.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/SyncTestRunCallback.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/SyncTestRunEventsHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/SyncTestRunEventsHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/TestEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/TestEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/TestsCallback.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/UnitTesting/TestsCallback.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/CommandLineParser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/CommandLineParser.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/FileSystemUtil.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/FileSystemUtil.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/LibcNativeInterop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/LibcNativeInterop.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/RiderMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/RiderMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/SerializableVersion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/Util/SerializableVersion.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/com.unity.ide.rider.asmdef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/Rider/Editor/com.unity.ide.rider.asmdef.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@2.0.7/package.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Giant Unicell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/Giant Unicell.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Unicell.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Unicell/Unicell.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Unicell/Unicell.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Unicell/UnicellMoveSet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Unicell/UnicellMoveSet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Turn-based combat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BattleHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BattleHUD.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/BattleSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BattleSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MoveSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoveSet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MoveSetCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoveSetCharacter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Unit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Unit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageManager/ProjectCache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PackageManager/ProjectCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PackageManager/ProjectCache.md5" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PackageManager/ProjectCache.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
@@ -125,9 +46,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.5.7/Editor/PlasticSCM/CloudProjectDownloader/CommandLineArguments.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/CreateSceneUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.5.7/Editor/PlasticSCM/EnumExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="29WBFF66dP2anszTj9hxPp2rZFN" />
@@ -179,7 +100,8 @@
       <workItem from="1653218865929" duration="1343000" />
       <workItem from="1653315077564" duration="32000" />
       <workItem from="1653390902994" duration="12853000" />
-      <workItem from="1653993064349" duration="6448000" />
+      <workItem from="1653993064349" duration="8054000" />
+      <workItem from="1654335611531" duration="2807000" />
     </task>
     <task id="LOCAL-00001" summary="unit behavior">
       <created>1653397194525</created>
@@ -209,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1653404285791</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="moveset template">
+      <created>1653999690176</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653999690176</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Assets/BattleSystem.cs&#10;#&#9;Library/SceneVisibilityState.asset&#10;#&#9;Library/ScriptAssemblies/Assembly-CSharp.dll&#10;#&#9;Library/StateCache/MainStageHierarchy/bb/bba1ddc477f69f852b7d290e49f47fff.json&#10;#&#9;Library/StateCache/SceneView/fe/feb90ca094c19f1ccffb18512c4c39e6.json">
+      <created>1653999752738</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653999752738</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +171,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="unit behavior" />
     <MESSAGE value="Shorten BattleSystem.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Shorten BattleSystem.cs" />
+    <MESSAGE value="moveset template" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Assets/BattleSystem.cs&#10;#&#9;Library/SceneVisibilityState.asset&#10;#&#9;Library/ScriptAssemblies/Assembly-CSharp.dll&#10;#&#9;Library/StateCache/MainStageHierarchy/bb/bba1ddc477f69f852b7d290e49f47fff.json&#10;#&#9;Library/StateCache/SceneView/fe/feb90ca094c19f1ccffb18512c4c39e6.json" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;Assets/BattleSystem.cs&#10;#&#9;Library/SceneVisibilityState.asset&#10;#&#9;Library/ScriptAssemblies/Assembly-CSharp.dll&#10;#&#9;Library/StateCache/MainStageHierarchy/bb/bba1ddc477f69f852b7d290e49f47fff.json&#10;#&#9;Library/StateCache/SceneView/fe/feb90ca094c19f1ccffb18512c4c39e6.json" />
   </component>
 </project>

@@ -54,9 +54,10 @@
   <ItemGroup>
      <Compile Include="Assets\BattleSystem.cs" />
      <Compile Include="Assets\Unit.cs" />
+     <Compile Include="Assets\MoveSetCharacter.cs" />
      <Compile Include="Assets\MoveSet.cs" />
      <Compile Include="Assets\BattleHUD.cs" />
-     <Compile Include="Assets\MoveSetCharacter.cs" />
+     <Compile Include="Assets\Unicell\UnicellMoveSet.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
      <None Include="Assets\Mirror\Version.txt" />
@@ -686,6 +687,9 @@
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
