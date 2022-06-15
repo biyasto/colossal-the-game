@@ -33,15 +33,15 @@ public  class UnicellMoveSet : MoveSet
         }
         else if (amount < 350)
         {
-            player.changeATK(5);
+            player.ChangeAtk(5);
         }
         else if (amount < 1000)
         {
-            player.changeATK(10);
+            player.ChangeAtk(10);
         }
         else
         {
-            player.changeATK(65);
+            player.ChangeAtk(65);
         }
 
         SetCd(3);

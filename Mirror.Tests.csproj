@@ -215,8 +215,8 @@
      <Compile Include="Assets\Mirror\Tests\Editor\Weaver\WeaverSyncListTests_IsSuccess\SyncListGenericAbstractInheritance.cs" />
      <Compile Include="Assets\Mirror\Tests\Editor\Weaver\WeaverSyncDictionaryTests_IsSuccess\SyncDictionaryInheritance.cs" />
      <Compile Include="Assets\Mirror\Tests\Editor\Weaver\WeaverNetworkBehaviourTests_IsValid\NetworkBehaviourGeneric.cs" />
-     <Compile Include="Assets\Mirror\Tests\Editor\SyncDictionaryTest.cs" />
      <Compile Include="Assets\Mirror\Tests\Editor\Weaver\WeaverSyncListTests_IsSuccess\SyncListByteValid.cs" />
+     <Compile Include="Assets\Mirror\Tests\Editor\SyncDictionaryTest.cs" />
      <Compile Include="Assets\Mirror\Tests\Editor\Weaver\WeaverTargetRpcTests_IsSuccess\VirtualTargetRpc.cs" />
      <Compile Include="Assets\Mirror\Tests\Editor\SnapshotInterpolationTests.cs" />
      <Compile Include="Assets\Mirror\Tests\Editor\Weaver\WeaverMonoBehaviourTests_IsSuccess\MonoBehaviourClientCallback.cs" />

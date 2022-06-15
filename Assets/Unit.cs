@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 using UnityEngine.Timeline;
 
-public class Unit : MonoBehaviour
+public class Unit : NetworkBehaviour
 {
 
 	public MoveSet moveset;
-	public string unitName;
-	public int unitLevel;
+	[SyncVar] public string unitName;
 
-	public int atk;
+	[SyncVar]public int atk;
 
-	public int maxHp;
-	public int currentHp;
+	[SyncVar]public int maxHp;
+	[SyncVar]public int currentHp;
 	
-	public int maxAP;
-	public int prt;
-
-	public int ttd;
+	[SyncVar]public int prt;
+	[SyncVar]public int ttd;
 
 	
-	public Unit emeny; 
-	public bool isResetTTD;
+	[SyncVar]public Unit emeny; 
+	[SyncVar]public bool isResetTtd;
 
 	private const int MAX_VALUE_PRT = 80;
 	private const int MIN_VALUE_PRT = 0;
@@ -34,59 +32,64 @@ public class Unit : MonoBehaviour
 	{
 		moveset = GetComponent<MoveSet>();
 	}
-
-	public bool TakeDamage(int amount)
+	[ClientRpc]
+	public void TakeDamage(int amount)
 	{
 		if (amount > 0)
 			currentHp -= (int) (1.0 * amount * (100 - prt) / 100);
 		else
 			currentHp -= amount;
-		receiveTTD((int) (1.0 * amount * (100 - prt) / 100));
-		isResetTTD = false;
+		ReceiveTtd((int) (1.0 * amount * (100 - prt) / 100));
+		isResetTtd = false;
 		if (currentHp <= 0)
 		{
 			currentHp = 0;
-			return true;
+			
 		}
 
-		return false;
+		
 	}
-
-	public void receiveTTD(int amount)
+	[ClientRpc]
+	public void ReceiveTtd(int amount)
 	{
 		ttd += amount;
 	}
-	public void resetTTD()
+	[ClientRpc]
+	public void ResetTtd()
 	{
 		ttd = 0;
 	}
-	
-	public void setHP(int amount)
+	[ClientRpc]
+	public void SetHp(int amount)
 	{
 		currentHp = amount > maxHp ? maxHp : amount;
 	}
-	public void setPRT(int amount)
+	[ClientRpc]
+	public void SetPrt(int amount)
 	{
-		changePRT(-prt);
-		changePRT(amount);
+		ChangePrt(-prt);
+		ChangePrt(amount);
 	}
-	public void setATK(int amount)
+	[ClientRpc]
+	public void SetAtk(int amount)
 	{
-		changeATK(-atk);
-		changeATK(amount);
+		ChangeAtk(-atk);
+		ChangeAtk(amount);
 	}
-	public void changePRT(int amount)
+	[ClientRpc]
+	public void ChangePrt(int amount)
 	{
 		prt += amount;
 		if (prt < MIN_VALUE_PRT) prt = MIN_VALUE_PRT;
 		if (prt > MAX_VALUE_PRT) prt = MAX_VALUE_PRT;
 	}
-	public void changeATK(int amount)
+	[ClientRpc]
+	public void ChangeAtk(int amount)
 	{
 		atk += amount;
 		if (prt < MIN_VALUE_ATK) prt = MIN_VALUE_ATK;
 	}
-
+	[ClientRpc]
 	public void Heal(int amount)
 	{
 		if (amount <= 0) return;
@@ -95,8 +98,8 @@ public class Unit : MonoBehaviour
 			currentHp = maxHp;
 	}
 	
-
-	public void setEnemy(Unit e)
+	[ClientRpc]
+	public void SetEnemy(Unit e)
 	{
 		emeny = e;
 	}

@@ -52,17 +52,28 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Tanks\Scripts\Projectile.cs" />
      <Compile Include="Assets\BattleSystem.cs" />
+     <Compile Include="Assets\BattleLogic.cs" />
+     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Unit.cs" />
      <Compile Include="Assets\MoveSetCharacter.cs" />
      <Compile Include="Assets\MoveSet.cs" />
+     <Compile Include="Assets\Tanks\Scripts\FaceCamera.cs" />
+     <Compile Include="Assets\PlayerNetwork.cs" />
+     <Compile Include="Assets\BattleSystemNetworkManager.cs" />
+     <Compile Include="Assets\Tanks\Scripts\Tank.cs" />
+     <Compile Include="Assets\Characters\Piece\PieceMoveSet.cs" />
      <Compile Include="Assets\BattleHUD.cs" />
-     <Compile Include="Assets\Unicell\UnicellMoveSet.cs" />
+     <Compile Include="Assets\Characters\Unicell\UnicellMoveSet.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
+     <None Include="Assets\Tanks\Textures\(Public Domain) Dirt Hand Painted Texture\Dirt Hand Painted Texture - License.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
      <None Include="Assets\ScriptTemplates\57-Mirror__Network Transform-NewNetworkTransform.cs.txt" />
+     <None Include="Assets\ParrelSync\VERSION.txt" />
      <None Include="Assets\ScriptTemplates\52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" />
      <None Include="Assets\Mirror\Notice.txt" />
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
@@ -70,6 +81,7 @@
      <None Include="Assets\ScriptTemplates\53-Mirror__Custom Interest Management-CustomInterestManagement.cs.txt" />
      <None Include="Assets\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
      <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
+     <None Include="Assets\Tanks\Models\(Public Domain) Recon_Tank\Recon_Tank - License.txt" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -744,6 +756,14 @@
     <ProjectReference Include="Mirror.Components.csproj">
       <Project>{7506ae97-de18-2232-a699-9e525f612939}</Project>
       <Name>Mirror.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.csproj">
+      <Project>{c7f6db06-40af-6847-79e7-7766392ccad4}</Project>
+      <Name>Mirror.Examples</Name>
+    </ProjectReference>
+    <ProjectReference Include="ParrelSync.csproj">
+      <Project>{1dd64b89-c729-a170-b5ae-ff0bf3575a3d}</Project>
+      <Name>ParrelSync</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

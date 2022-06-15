@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Mirror;
 public enum BattleState
 {
     START,
@@ -31,30 +31,30 @@ public class BattleSystem : MonoBehaviour
     public Unit curPlayer;
     public Unit curEnemy;
 
-    // Start is called before the first frame update
-    void Start()
+    
+    public  void Start()
     {
         state = BattleState.START;
         StartCoroutine(SetupBattle());
         dialogueText.text = "The game started ...";
     }
-
-    IEnumerator SetupBattle()
+    
+    
+    IEnumerator  SetupBattle()
     {
+      
         GameObject player1GO = Instantiate(player1Prefab, player1BattleStation);
         _player1Unit = player1GO.GetComponent<Unit>();
 
         GameObject player2GO = Instantiate(player2Prefab, player2BattleStation);
         _player2Unit = player2GO.GetComponent<Unit>();
 
-        _player1Unit.setEnemy(_player2Unit);
-        _player2Unit.setEnemy(_player1Unit);
+        _player1Unit.SetEnemy(_player2Unit);
+        _player2Unit.SetEnemy(_player1Unit);
 
         player1HUD.SetHUD(_player1Unit);
         player2HUD.SetHUD(_player2Unit);
-
         yield return new WaitForSeconds(2f);
-
         state = BattleState.PLAYER1TURN;
         PlayerTurn();
     }
@@ -67,7 +67,7 @@ public class BattleSystem : MonoBehaviour
     }
 
 
-    IEnumerator PlayerAttack()
+    IEnumerator PlayerMove1()
     {
         if (!curPlayer.moveset.Move1())
         {
@@ -77,7 +77,7 @@ public class BattleSystem : MonoBehaviour
         else
         {
             SetHubBar();
-            resetText();
+            ResetText();
             yield return new WaitForSeconds(0.1f);
             dialogueText.text = RollADice().ToString() + "The attack is successful!";
             yield return new WaitForSeconds(2f);
@@ -106,7 +106,7 @@ public class BattleSystem : MonoBehaviour
            else
            {
                SetHubBar();
-               resetText();
+               ResetText();
                yield return new WaitForSeconds(0.1f);
                dialogueText.text = "The heal is successful!";
            }
@@ -118,16 +118,43 @@ public class BattleSystem : MonoBehaviour
            
         }
     }
+    IEnumerator PlayerMove3()
+    {
+        bool isDead;
 
-    void resetText()
+
+        {
+            // isDead = false;
+
+            if (!curPlayer.moveset.Ultimate())
+            {
+                yield return new WaitForSeconds(0.1f);
+                dialogueText.text = "The ulti was in Cd";
+            }
+            else
+            {
+                SetHubBar();
+                ResetText();
+                yield return new WaitForSeconds(0.1f);
+                dialogueText.text = "The ultimate is successful!";
+            }
+
+
+            if (curEnemy.currentHp > 0) yield break;
+            state = BattleState.END;
+            EndBattle();
+           
+        }
+    }
+    void ResetText()
     {
         dialogueText.text = "";
     }
 
     void SetHubBar()
     {
-        player1HUD.SetHp(_player1Unit.currentHp);
-        player2HUD.SetHp(_player2Unit.currentHp);
+        player1HUD.SetUnitData(_player1Unit.currentHp);
+        player2HUD.SetUnitData(_player2Unit.currentHp);
     }
 
     void EndBattle()
@@ -152,7 +179,7 @@ public class BattleSystem : MonoBehaviour
             curEnemy = _player1Unit;
         }
 
-        curPlayer.emeny.isResetTTD = true;
+        curPlayer.emeny.isResetTtd = true;
         curPlayer.moveset.ReduceCd();
         dialogueText.text = curPlayer.unitName + "'s turn!";
     }
@@ -162,12 +189,12 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.PLAYER1TURN)
         {
-            if(_player2Unit.isResetTTD) _player2Unit.resetTTD();
+            if(_player2Unit.isResetTtd) _player2Unit.ResetTtd();
             state = BattleState.PLAYER2TURN;
         }
         else if (state == BattleState.PLAYER2TURN)
         {
-            if(_player1Unit.isResetTTD) _player1Unit.resetTTD(); 
+            if(_player1Unit.isResetTtd) _player1Unit.ResetTtd(); 
             state = BattleState.PLAYER1TURN;
         }
 
@@ -175,10 +202,10 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
     }
 
-    public void OnAttackButton()
+    public void OnMove1Button()
     {
         if (state != BattleState.PLAYER1TURN && state != BattleState.PLAYER2TURN) return;
-        StartCoroutine(PlayerAttack());
+        StartCoroutine(PlayerMove1());
     }
 
 
@@ -192,5 +219,10 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.PLAYER1TURN && state != BattleState.PLAYER2TURN) return;
         StartCoroutine(PlayerMove2());
+    }
+    public void OnMove3Button()
+    {
+        if (state != BattleState.PLAYER1TURN && state != BattleState.PLAYER2TURN) return;
+        StartCoroutine(PlayerMove3());
     }
 } 
