@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace Mirror.Examples.Basic
@@ -11,13 +11,15 @@ namespace Mirror.Examples.Basic
         public NetworkIdentity UnitNetworkIdentity;
         static public  uint Player1NetID=0 ;
         static public  uint Player2NetID=0 ;
+
+        [SyncVar] public BattleHandler battleHandler;
         // Events that the PlayerUI will subscribe to
         public event System.Action<byte> OnPlayerNumberChanged;
         public event System.Action<Color32> OnPlayerColorChanged;
         public event System.Action<ushort> OnPlayerDataChanged;
 
         // Players List to manage playerNumber
-        static readonly List<Player> playersList = new List<Player>();
+        public static readonly List<Player> playersList = new List<Player>();
 
         [Header("Player UI")]
         public GameObject playerUIPrefab;
