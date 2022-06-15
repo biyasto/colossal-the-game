@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/PlayScene.unity
+- path: Assets/Mirror/Examples/Basic/Scenes/Example.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

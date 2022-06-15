@@ -53,20 +53,19 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Tanks\Scripts\Projectile.cs" />
-     <Compile Include="Assets\BattleSystem.cs" />
-     <Compile Include="Assets\BattleLogic.cs" />
+     <Compile Include="Assets\Old Script\BattleSystem.cs" />
+     <Compile Include="Assets\Old Script\BattleLogic.cs" />
      <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
-     <Compile Include="Assets\GameManager.cs" />
-     <Compile Include="Assets\Unit.cs" />
-     <Compile Include="Assets\MoveSetCharacter.cs" />
-     <Compile Include="Assets\MoveSet.cs" />
+     <Compile Include="Assets\Old Script\MoveSetCharacter.cs" />
+     <Compile Include="Assets\Old Script\MoveSet.cs" />
      <Compile Include="Assets\Tanks\Scripts\FaceCamera.cs" />
-     <Compile Include="Assets\PlayerNetwork.cs" />
-     <Compile Include="Assets\BattleSystemNetworkManager.cs" />
+     <Compile Include="Assets\Old Script\PlayerNetwork.cs" />
+     <Compile Include="Assets\Old Script\BattleSystemNetworkManager.cs" />
      <Compile Include="Assets\Tanks\Scripts\Tank.cs" />
      <Compile Include="Assets\Characters\Piece\PieceMoveSet.cs" />
-     <Compile Include="Assets\BattleHUD.cs" />
+     <Compile Include="Assets\Old Script\BattleHUD.cs" />
      <Compile Include="Assets\Characters\Unicell\UnicellMoveSet.cs" />
+     <Compile Include="Assets\Unit.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\Tanks\Textures\(Public Domain) Dirt Hand Painted Texture\Dirt Hand Painted Texture - License.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
