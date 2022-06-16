@@ -101,13 +101,17 @@ public class Unit : NetworkBehaviour
 
         return false;
     }
+
+  
+
+    [ClientRpc]
     public void TakeDamage(int amount)
     {
         if (amount > 0)
             currentHp -= (int) (1.0 * amount * (100 - prt) / 100);
         else
             currentHp -= amount;
-        ReceiveTtd((int) (1.0 * amount * (100 - prt) / 100));
+        CmdReceiveTtd((int) (1.0 * amount * (100 - prt) / 100));
         isResetTtd = false;
         if (currentHp <= 0)
         {
@@ -124,12 +128,13 @@ public class Unit : NetworkBehaviour
         else return 0;
     }
 
+
     private void Update()
     {
-        if (isLocalPlayer)
+        /*if (isLocalPlayer)
         {
             DamageEnemy(1, GetEnemyNetID());
-        }
+        }*/
 
         /*
         if (is && Input.GetKeyDown(KeyCode.A) )//&& AuthCheck())
@@ -138,15 +143,24 @@ public class Unit : NetworkBehaviour
             return;
         }*/
 
+     
+
         if (isLocalPlayer && playerObj.battleHandler)
         {
             if (playerObj.battleHandler.hasAuthority && Input.GetKeyDown(KeyCode.A))
             {
                 playerObj.battleHandler.Endturn();
             }
+            if (playerObj.battleHandler.hasAuthority && Input.GetKeyDown(KeyCode.S))
+            {
+                DamageEnemy(10,GetEnemyNetID());
+              
+            }
         }
     }
+   
 
+  
     
     [Command]
     public void DamageEnemy(int amount, uint id)
@@ -156,69 +170,104 @@ public class Unit : NetworkBehaviour
     [ClientRpc]
     public void RPCEnemyTakeDamage(int amount,uint playerId)
     {
-        if (playerId == 0) return;
-        NetworkIdentity.spawned[playerId].gameObject.GetComponent<Unit>().atk+=amount;
+        
+        NetworkIdentity.spawned[playerId].gameObject.GetComponent<Unit>().TakeDamage(amount);
         NetworkIdentity.spawned[playerId].gameObject.GetComponent<Player>().playerUI
             .OnUnitAtkChanged(NetworkIdentity.spawned[playerId].gameObject.GetComponent<Unit>().atk);
     }
+  
     
+    [Command]
+    public void CmdReceiveTtd(int amount)
+    {
+        RpcReceiveTtd(amount);
+    }
     [ClientRpc]
-    public void RPCReceiveTtd(int amount)
+    public void RpcReceiveTtd(int amount)
     {
         ttd += amount;
     }
-    public void ResetTtd()
+    [Command]
+    public void CmdResetTtd()
+    {
+        RpcResetTtd();
+    }
+    [ClientRpc]
+    public void RpcResetTtd()
     {
         ttd = 0;
     }
-    
-    public void SetHp(int amount)
+
+    [Command]
+    public void CmdSetHp(int amount)
+    {
+        RpcSetHp(amount);
+    }
+    [ClientRpc]
+    public void RpcSetHp(int amount)
     {
         currentHp = amount > maxHp ? maxHp : amount;
     }
+    public void CmdSetPrt(int amount)
+    {
+        RpcSetPrt(amount);
+    }
+    [ClientRpc]
+    public void RpcSetPrt(int amount)
+    {
+        CmdChangePrt(-prt);
+        CmdChangePrt(amount);
+    }
     [Command]
-    public void ReceiveTtd(int amount)
+    public void CmdSetAtk(int amount)
     {
-        RPCReceiveTtd(amount);
+        RpcSetAtk(amount);
     }
-    public void SetPrt(int amount)
+    [ClientRpc]
+    public void RpcSetAtk(int amount)
     {
-        ChangePrt(-prt);
-        ChangePrt(amount);
+        RpcChangeAtk(-atk);
+        RpcChangeAtk(amount);
     }
-
-    public void SetAtk(int amount)
+    [Command]
+    public void CmdChangePrt(int amount)
     {
-        ChangeAtk(-atk);
-        ChangeAtk(amount);
+        RpcChangePrt(amount);
     }
-  
-    public void ChangePrt(int amount)
+    [ClientRpc]
+    public void RpcChangePrt(int amount)
     {
         prt += amount;
         if (prt < MIN_VALUE_PRT) prt = MIN_VALUE_PRT;
         if (prt > MAX_VALUE_PRT) prt = MAX_VALUE_PRT;
     }
-   
-    public void ChangeAtk(int amount)
+    
+    [Command]
+    public void CmdChangeAtk(int amount)
+    {
+        RpcChangeAtk(amount);
+    }
+    [ClientRpc]
+    public void RpcChangeAtk(int amount)
     {
         atk += amount;
         if (prt < MIN_VALUE_ATK) prt = MIN_VALUE_ATK;
     }
-    
-    public void Heal(int amount)
+
+    [Command]
+    public void CmdHeal(int amount)
+    {
+        RpcHeal(amount);
+    }
+    [ClientRpc]
+    public void RpcHeal(int amount)
     {
         if (amount <= 0) return;
         currentHp += amount;
         if (currentHp > maxHp)
             currentHp = maxHp;
     }
-	
- 
-    public void SetEnemy(Unit e)
-    {
-        emeny = e;
-    }
+    
 
     
 }

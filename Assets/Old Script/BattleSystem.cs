@@ -49,8 +49,8 @@ public class BattleSystem : MonoBehaviour
         GameObject player2GO = Instantiate(player2Prefab, player2BattleStation);
         _player2Unit = player2GO.GetComponent<Unit>();
 
-        _player1Unit.SetEnemy(_player2Unit);
-        _player2Unit.SetEnemy(_player1Unit);
+       // _player1Unit.SetEnemy(_player2Unit);
+        //_player2Unit.SetEnemy(_player1Unit);
 
         player1HUD.SetHUD(_player1Unit);
         player2HUD.SetHUD(_player2Unit);
@@ -189,12 +189,12 @@ public class BattleSystem : MonoBehaviour
     {
         if (state == BattleState.PLAYER1TURN)
         {
-            if(_player2Unit.isResetTtd) _player2Unit.ResetTtd();
+            //if(_player2Unit.isResetTtd) _player2Unit.ResetTtd();
             state = BattleState.PLAYER2TURN;
         }
         else if (state == BattleState.PLAYER2TURN)
         {
-            if(_player1Unit.isResetTtd) _player1Unit.ResetTtd(); 
+            //if(_player1Unit.isResetTtd) _player1Unit.ResetTtd(); 
             state = BattleState.PLAYER1TURN;
         }
 

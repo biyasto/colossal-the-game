@@ -64,6 +64,8 @@
      <Compile Include="Assets\Characters\Piece\PieceMoveSet.cs" />
      <Compile Include="Assets\Old Script\BattleHUD.cs" />
      <Compile Include="Assets\Characters\Unicell\UnicellMoveSet.cs" />
+     <Compile Include="Assets\Free UI build package\Script\Slide.cs" />
+     <Compile Include="Assets\Free UI build package\Script\Togglescript.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\Tanks\Textures\(Public Domain) Dirt Hand Painted Texture\Dirt Hand Painted Texture - License.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
@@ -711,6 +713,15 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Sysroot.Linux_x86_64">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.SysrootPackage.Editor">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

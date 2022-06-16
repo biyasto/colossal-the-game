@@ -19,7 +19,7 @@ public  class PieceMoveSet : MoveSet
     {
         if (!CheckCd(2)) return false;
         //if chua dung chieu
-        player.ChangePrt(10);
+        //player.ChangePrt(10);
         //bo qua luot
         SetCd(2);
         return true;
@@ -29,11 +29,11 @@ public  class PieceMoveSet : MoveSet
     public override bool Ultimate()
     {
         if (!CheckCd(3)) return false;
-       player.ChangeAtk(2);
+       //player.ChangeAtk(2);
        //swap ATK and PRT
        int temp = player.atk;
-       player.SetAtk(player.prt);
-       player.SetPrt(temp);
+      // player.SetAtk(player.prt);
+       //player.SetPrt(temp);
        
         SetCd(3);
         return true;

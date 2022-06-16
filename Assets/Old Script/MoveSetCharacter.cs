@@ -15,9 +15,9 @@ public  class MoveSetCharacter : MoveSet
 
     public override bool Move2()
     {
-        if (!CheckCd(2)) return false;
+        /*if (!CheckCd(2)) return false;
         player.Heal(10);
-        SetCd(2);
+        SetCd(2);*/
         return true;
     }
 

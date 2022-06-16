@@ -8,7 +8,7 @@ public  class UnicellMoveSet : MoveSet
     {
         if (!CheckCd(1)) return false;
         if (player.ttd <= 0) return false;
-        player.Heal((int)1.0*player.ttd*player.atk/100);
+       // player.Heal((int)1.0*player.ttd*player.atk/100);
         SetCd(1);
         return true;
     }
@@ -33,15 +33,15 @@ public  class UnicellMoveSet : MoveSet
         }
         else if (amount < 350)
         {
-            player.ChangeAtk(5);
+            //player.ChangeAtk(5);
         }
         else if (amount < 1000)
         {
-            player.ChangeAtk(10);
+           // player.ChangeAtk(10);
         }
         else
         {
-            player.ChangeAtk(65);
+           // player.ChangeAtk(65);
         }
 
         SetCd(3);
