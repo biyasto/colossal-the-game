@@ -100,10 +100,10 @@ public class BattleHandler : NetworkBehaviour
     {
         Debug.Log(" Game bat dau " );
     }
-    [Server]
+   
     void ChangeState(BattleStates _states, BattleStates _newstates)
     {
-        if (!Player1 || !Player2) return;
+        if (!isServer|| !Player1 || !Player2) return;
         GetComponent<NetworkIdentity>().RemoveClientAuthority();
         if (_newstates == BattleStates.Player1Turn) { GetComponent<NetworkIdentity>().AssignClientAuthority(Player1.GetComponent<Player>().connectionToClient);}
         if (_newstates == BattleStates.Player2Turn) {GetComponent<NetworkIdentity>().AssignClientAuthority(Player2.GetComponent<Player>().connectionToClient);}
@@ -124,13 +124,26 @@ public class BattleHandler : NetworkBehaviour
         }*/
     }
 
+    bool CheckSkillAvailable(int index, GameObject player)
+    {
+        
+        return true;
+    }
+    [Command]
+    public void SkillACtion(int index)
+    {
+        if (!CheckSkillAvailable(index, state == BattleStates.Player1Turn ? Player1 : Player2)) return;
+        //Call skill  // them param trả text
+        isDoneAction = true;
+
+    }
     [Command]
     public void Endturn()
     {
+        
         Debug.Log(state.ToString()+"you end turn");
         switchPlayerTurn();
     }
-    [Server]
     void switchPlayerTurn()
     {
         if (state == BattleStates.Player1Turn) state = BattleStates.Player2Turn;
