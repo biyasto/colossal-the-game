@@ -52,24 +52,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Mirror\Editor\Empty\ScriptableObjectUtility.cs" />
-     <Compile Include="Assets\Mirror\Editor\SyncVarDrawer.cs" />
-     <Compile Include="Assets\Mirror\Editor\SyncObjectCollectionsDrawer.cs" />
-     <Compile Include="Assets\Mirror\Editor\SyncVarAttributeDrawer.cs" />
-     <Compile Include="Assets\Mirror\Editor\NetworkInformationPreview.cs" />
-     <Compile Include="Assets\Mirror\Editor\EditorHelper.cs" />
-     <Compile Include="Assets\Mirror\Editor\Empty\Logging\LogLevelWindow.cs" />
-     <Compile Include="Assets\Mirror\Editor\Empty\EnterPlayModeSettingsCheck.cs" />
-     <Compile Include="Assets\Mirror\Editor\NetworkManagerEditor.cs" />
-     <Compile Include="Assets\Mirror\Editor\NetworkBehaviourInspector.cs" />
-     <Compile Include="Assets\Mirror\Editor\Empty\Logging\LogLevelsGUI.cs" />
-     <Compile Include="Assets\Mirror\Editor\SceneDrawer.cs" />
-     <Compile Include="Assets\Mirror\Editor\InspectorHelper.cs" />
-     <Compile Include="Assets\Mirror\Editor\Empty\Logging\NetworkLogSettingsEditor.cs" />
-     <Compile Include="Assets\Mirror\Editor\AndroidManifestHelper.cs" />
-     <Compile Include="Assets\Mirror\Editor\NetworkScenePostProcess.cs" />
-     <Compile Include="Assets\Mirror\Editor\Empty\LogLevelWindow.cs" />
-     <Compile Include="Assets\Mirror\Editor\Empty\Logging\LogSettingsEditor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\ScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\SyncVarDrawer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\SyncObjectCollectionsDrawer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\SyncVarAttributeDrawer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\NetworkInformationPreview.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\EditorHelper.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\Logging\LogLevelWindow.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\EnterPlayModeSettingsCheck.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\NetworkManagerEditor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\NetworkBehaviourInspector.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\Logging\LogLevelsGUI.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\SceneDrawer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\InspectorHelper.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\Logging\NetworkLogSettingsEditor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\AndroidManifestHelper.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\NetworkScenePostProcess.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\LogLevelWindow.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Empty\Logging\LogSettingsEditor.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -322,35 +322,41 @@
  <Reference Include="UnityEditor.Lumin.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="Jint">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Plugins/Jint/Jint.dll</HintPath>
+ </Reference>
  <Reference Include="Mono.CecilX.Rocks">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Pdb">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
  </Reference>
  <Reference Include="Castle.Core">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/Castle.Core.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="NSubstitute">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/NSubstitute.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Tasks.Extensions">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Mdb">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="BouncyCastle.Crypto">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Plugins/BouncyCastle.Crypto.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>

@@ -52,46 +52,46 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncVarAttributeProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Readers.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncObjectInitializer.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\TargetRpcProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporter.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Empty\SyncDictionaryProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorHook.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\ServerClientAttributeProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Extensions.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\NetworkBehaviourProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\SyncVarAccessLists.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Writers.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorAssemblyResolver.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedHook.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\MethodProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\AssemblyInfo.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Weaver.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\WeaverTypes.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\CommandProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncObjectProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Empty\SyncEventProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\MonoBehaviourProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\SyncVarAttributeAccessReplacer.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Resolvers.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\ReaderWriterProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\TypeReferenceComparer.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Empty\SyncListProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\EnterPlayModeHook.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Logger.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Empty\Program.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorLogger.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedLogger.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Empty\GenericArgumentResolver.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporterProvider.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorFromFile.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Processors\RpcProcessor.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Helpers.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\EntryPointILPostProcessor\CompiledAssemblyFromFile.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\WeaverExceptions.cs" />
-     <Compile Include="Assets\Mirror\Editor\Weaver\Empty\MessageClassProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\SyncVarAttributeProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Readers.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\SyncObjectInitializer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\TargetRpcProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporter.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Empty\SyncDictionaryProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorHook.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\ServerClientAttributeProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Extensions.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\NetworkBehaviourProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\SyncVarAccessLists.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Writers.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorAssemblyResolver.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedHook.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\MethodProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\AssemblyInfo.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Weaver.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\WeaverTypes.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\CommandProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\SyncObjectProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Empty\SyncEventProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\MonoBehaviourProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\SyncVarAttributeAccessReplacer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Resolvers.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\ReaderWriterProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\TypeReferenceComparer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Empty\SyncListProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPoint\EnterPlayModeHook.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Logger.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Empty\Program.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorLogger.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPoint\CompilationFinishedLogger.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Empty\GenericArgumentResolver.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorReflectionImporterProvider.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\ILPostProcessorFromFile.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Processors\RpcProcessor.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Helpers.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\EntryPointILPostProcessor\CompiledAssemblyFromFile.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\WeaverExceptions.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Editor\Weaver\Empty\MessageClassProcessor.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -345,10 +345,10 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Rocks">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
