@@ -52,35 +52,128 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Tanks\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC20\ERC20SymbolExample.cs" />
+     <Compile Include="Assets\Basic\Scripts\PlayerUI.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC721\ERC721URIExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLTransfer721.cs" />
+     <Compile Include="Assets\Librabry\Tanks\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletSignMessageExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC721\ERC721OwnerOfExample.cs" />
      <Compile Include="Assets\Old Script\BattleSystem.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC1155\ERC1155BalanceOfExample.cs" />
      <Compile Include="Assets\Old Script\BattleLogic.cs" />
-     <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+     <Compile Include="Assets\Librabry\ParrelSync\Examples\CustomArgumentExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Scenes\WalletLogin.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletTransfer721Example.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC20\ERC20DecimalsExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLSendTransactionExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\EVM.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Scenes\WebLogin.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC721\ERC721BalanceOfExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\VerifyExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\AllErc1155Example.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC1155\ERC1155URIExample.cs" />
+     <Compile Include="Assets\Scripts\NFTConnect\UnicellERC1155Balance.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeySignMessageExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Minter\Model\CreateMintModel.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLSignOut.cs" />
      <Compile Include="Assets\Old Script\MoveSetCharacter.cs" />
-     <Compile Include="Assets\Tanks\Scripts\FaceCamera.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC20\ERC20TotalSupplyExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLSha3Example.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Prefabs\ERC1155\ImportNFTTextureExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\CustomRPCExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletSha3Example.cs" />
+     <Compile Include="Assets\Basic\Scripts\Unit.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeySend20Example.cs" />
+     <Compile Include="Assets\Scripts\CharacterUI.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLTransfer1155.cs" />
+     <Compile Include="Assets\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\BlockNumberExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeySendTransactionExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\TxStatus.cs" />
+     <Compile Include="Assets\Scripts\SkillUI.cs" />
+     <Compile Include="Assets\Basic\Scripts\MoveSet.cs" />
+     <Compile Include="Assets\Librabry\Tanks\Scripts\FaceCamera.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\CustomCallExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\Web3Wallet.cs" />
      <Compile Include="Assets\Old Script\PlayerNetwork.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletTransfer20Example.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLTransfer20.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletTransfer1155Example.cs" />
+     <Compile Include="Assets\Basic\Scripts\BattleHandler.cs" />
+     <Compile Include="Assets\Scripts\NumberUI.cs" />
+     <Compile Include="Assets\Scripts\NFTConnect\GetAccount.cs" />
+     <Compile Include="Assets\Scripts\Inventory.cs" />
+     <Compile Include="Assets\Basic\Scripts\CanvasUI.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Minter\MintWebGL.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeySend721Example.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\EthBalanceOfExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletSendTransactionExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Wallet\Web3WalletLogOut.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\AllErc721Example.cs" />
      <Compile Include="Assets\Old Script\BattleSystemNetworkManager.cs" />
-     <Compile Include="Assets\Tanks\Scripts\Tank.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\ERC1155.cs" />
+     <Compile Include="Assets\Librabry\Tanks\Scripts\Tank.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLSignMessageExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\ERC20.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Minter\MintPK.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC1155\ERC1155BalanceOfBatchExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC20\ERC20NameExample.cs" />
      <Compile Include="Assets\Characters\Piece\PieceMoveSet.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\Web3PrivateKey.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeySend1155Example.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\ERC721.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLSignVerifyExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeyAddressExample.cs" />
+     <Compile Include="Assets\Basic\Scripts\Player.cs" />
+     <Compile Include="Assets\Basic\Scripts\BasicNetManager.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\WebGL\Web3GL.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC721\ERC721OwnerOfBatchExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC20\ERC20BalanceOfExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\WebGL\WebGLSendContractExample.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\CreateContractDataExample.cs" />
+     <Compile Include="Assets\Basic\Scripts\PlayersSelection.cs" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\Minter\MintWeb3Wallet.cs" />
      <Compile Include="Assets\Old Script\BattleHUD.cs" />
      <Compile Include="Assets\Characters\Unicell\UnicellMoveSet.cs" />
-     <Compile Include="Assets\Free UI build package\Script\Slide.cs" />
-     <Compile Include="Assets\Free UI build package\Script\Togglescript.cs" />
-     <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
-     <None Include="Assets\Tanks\Textures\(Public Domain) Dirt Hand Painted Texture\Dirt Hand Painted Texture - License.txt" />
-     <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
-     <None Include="Assets\Mirror\Version.txt" />
-     <None Include="Assets\Mirror\Readme.txt" />
-     <None Include="Assets\ScriptTemplates\57-Mirror__Network Transform-NewNetworkTransform.cs.txt" />
-     <None Include="Assets\ParrelSync\VERSION.txt" />
-     <None Include="Assets\ScriptTemplates\52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" />
-     <None Include="Assets\Mirror\Notice.txt" />
-     <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
-     <None Include="Assets\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
-     <None Include="Assets\ScriptTemplates\53-Mirror__Custom Interest Management-CustomInterestManagement.cs.txt" />
-     <None Include="Assets\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
-     <None Include="Assets\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
-     <None Include="Assets\Tanks\Models\(Public Domain) Recon_Tank\Recon_Tank - License.txt" />
+     <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\NonceExample.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlayerNameInput.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Librabry\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Librabry\Tanks\Textures\(Public Domain) Dirt Hand Painted Texture\Dirt Hand Painted Texture - License.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\Librabry\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Librabry\Mirror\Version.txt" />
+     <None Include="Assets\Librabry\Mirror\Readme.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\Librabry\ScriptTemplates\57-Mirror__Network Transform-NewNetworkTransform.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Librabry\ParrelSync\VERSION.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Librabry\ScriptTemplates\52-Mirror__Network Behaviour-NewNetworkBehaviour.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\Librabry\Mirror\Notice.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\Librabry\Mirror\Plugins\Mono.Cecil\License.txt" />
+     <None Include="Assets\Librabry\ScriptTemplates\55-Mirror__Network Room Player-NewNetworkRoomPlayer.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Librabry\ScriptTemplates\53-Mirror__Custom Interest Management-CustomInterestManagement.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Librabry\ScriptTemplates\50-Mirror__Network Manager-NewNetworkManager.cs.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Librabry\ScriptTemplates\54-Mirror__Network Room Manager-NewNetworkRoomManager.cs.txt" />
+     <None Include="Assets\Librabry\Tanks\Models\(Public Domain) Recon_Tank\Recon_Tank - License.txt" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -303,29 +396,35 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
+ <Reference Include="Jint">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Plugins/Jint/Jint.dll</HintPath>
+ </Reference>
  <Reference Include="Mono.CecilX.Rocks">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Pdb">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Pdb.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
  </Reference>
  <Reference Include="Castle.Core">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/Castle.Core.dll</HintPath>
  </Reference>
  <Reference Include="NSubstitute">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/NSubstitute.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Tasks.Extensions">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Mono.CecilX.Mdb">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Mdb.dll</HintPath>
+ </Reference>
+ <Reference Include="BouncyCastle.Crypto">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Plugins/BouncyCastle.Crypto.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -690,8 +789,8 @@
  <Reference Include="Unity.VisualStudio.Editor">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <Reference Include="Unity.Sysroot.Linux_x86_64">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -714,17 +813,21 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Sysroot.Linux_x86_64">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Toolchain.Win-x86_64-Linux-x86_64.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.SysrootPackage.Editor">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{c983bc3b-7dbb-9f17-efc2-439d7d676c2a}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Mirror.csproj">
       <Project>{7435a27b-a75e-cc32-41b1-d2d4bead37f0}</Project>
       <Name>Mirror</Name>
@@ -732,6 +835,10 @@
     <ProjectReference Include="kcp2k.csproj">
       <Project>{0b9f7aab-af00-9b3b-3bce-3203e1db51a5}</Project>
       <Name>kcp2k</Name>
+    </ProjectReference>
+    <ProjectReference Include="ParrelSync.csproj">
+      <Project>{1dd64b89-c729-a170-b5ae-ff0bf3575a3d}</Project>
+      <Name>ParrelSync</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Editor.csproj">
       <Project>{43aa4de6-402b-4aa1-d3be-8ca9465553d8}</Project>
@@ -764,14 +871,6 @@
     <ProjectReference Include="Mirror.Components.csproj">
       <Project>{7506ae97-de18-2232-a699-9e525f612939}</Project>
       <Name>Mirror.Components</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{c7f6db06-40af-6847-79e7-7766392ccad4}</Project>
-      <Name>Mirror.Examples</Name>
-    </ProjectReference>
-    <ProjectReference Include="ParrelSync.csproj">
-      <Project>{1dd64b89-c729-a170-b5ae-ff0bf3575a3d}</Project>
-      <Name>ParrelSync</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -52,13 +52,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Mirror\Tests\Common\ClientSceneTests_RegisterPrefabBase.cs" />
-     <Compile Include="Assets\Mirror\Tests\Common\MirrorPlayModeTest.cs" />
-     <Compile Include="Assets\Mirror\Tests\Common\MirrorTest.cs" />
-     <Compile Include="Assets\Mirror\Tests\Common\MemoryTransport.cs" />
-     <Compile Include="Assets\Mirror\Tests\Common\MirrorEditModeTest.cs" />
-     <Compile Include="Assets\Mirror\Tests\Common\ClientSceneTestsBase.cs" />
-     <Compile Include="Assets\Mirror\Tests\Common\FakeNetworkConnection.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\ClientSceneTests_RegisterPrefabBase.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\MirrorPlayModeTest.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\MirrorTest.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\MemoryTransport.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\MirrorEditModeTest.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\ClientSceneTestsBase.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Common\FakeNetworkConnection.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

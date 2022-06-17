@@ -52,13 +52,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Mirror\Tests\Runtime\ClientSceneTests_Runtime_RegisterPrefab.cs" />
-     <Compile Include="Assets\Mirror\Tests\Runtime\NetworkManagerTests.cs" />
-     <Compile Include="Assets\Mirror\Tests\Runtime\NetworkIdentityTests.cs" />
-     <Compile Include="Assets\Mirror\Tests\Runtime\ClientSceneTests_LocalPlayer.cs" />
-     <Compile Include="Assets\Mirror\Tests\Runtime\ClientSceneTests_DestroyAllClientObjects.cs" />
-     <Compile Include="Assets\Mirror\Tests\Runtime\NetworkServerRuntimeTest.cs" />
-     <Compile Include="Assets\Mirror\Tests\Runtime\ClientSceneTests_LocalPlayer_AsHost.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\ClientSceneTests_Runtime_RegisterPrefab.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\NetworkManagerTests.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\NetworkIdentityTests.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\ClientSceneTests_LocalPlayer.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\ClientSceneTests_DestroyAllClientObjects.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\NetworkServerRuntimeTest.cs" />
+     <Compile Include="Assets\Librabry\Mirror\Tests\Runtime\ClientSceneTests_LocalPlayer_AsHost.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -282,13 +282,13 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="NSubstitute">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/NSubstitute.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/NSubstitute.dll</HintPath>
  </Reference>
  <Reference Include="Castle.Core">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/Castle.Core.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/Castle.Core.dll</HintPath>
  </Reference>
  <Reference Include="System.Threading.Tasks.Extensions">
- <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
+ <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Assets/Librabry/Mirror/Tests/Common/System.Threading.Tasks.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>C:/Users/ROG/RiderProjects/Game-DoAn/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
