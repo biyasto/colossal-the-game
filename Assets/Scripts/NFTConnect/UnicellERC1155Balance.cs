@@ -7,9 +7,10 @@ public class UnicellERC1155Balance: MonoBehaviour, ICharacterToken
 {
     public string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
 
-    public bool isAvailable;
+  
 
     public bool IsAvailable => isAvailable;
+
 
     async void Start()
     {
@@ -25,7 +26,8 @@ public class UnicellERC1155Balance: MonoBehaviour, ICharacterToken
 
             if (balanceOf > 0)
 
-            isAvailable = true;
+         isAvailable = true;
+
 
         
         else isAvailable = false;
