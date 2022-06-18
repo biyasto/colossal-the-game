@@ -149,6 +149,9 @@
      <Compile Include="Assets\Scripts\Characters\FireMoveSet.cs" />
      <Compile Include="Assets\Scripts\Characters\BotMoveSet.cs" />
      <Compile Include="Assets\Scripts\Characters\EntMoveSet.cs" />
+     <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\NFTConnect\CharacterToken.cs" />
+     <Compile Include="Assets\Scripts\Menu\LoginMenuManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Librabry\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
