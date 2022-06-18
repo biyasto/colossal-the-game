@@ -127,6 +127,7 @@
      <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\PrivateKey\Web3PrivateKeyAddressExample.cs" />
      <Compile Include="Assets\Basic\Scripts\Player.cs" />
      <Compile Include="Assets\Basic\Scripts\BasicNetManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\PlayerNameInput.cs" />
      <Compile Include="Assets\Librabry\Web3Unity\Scripts\Library\WebGL\Web3GL.cs" />
      <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC721\ERC721OwnerOfBatchExample.cs" />
      <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\ERC20\ERC20BalanceOfExample.cs" />
@@ -137,7 +138,6 @@
      <Compile Include="Assets\Old Script\BattleHUD.cs" />
      <Compile Include="Assets\Characters\Unicell\UnicellMoveSet.cs" />
      <Compile Include="Assets\Librabry\Web3Unity\Scripts\Prefabs\EVM\NonceExample.cs" />
-     <Compile Include="Assets\Scripts\Menu\PlayerNameInput.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Librabry\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
