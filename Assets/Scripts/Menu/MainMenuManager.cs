@@ -1,35 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [Header("Login Menu")]
-    public GameObject loginMenu;
-    public TMP_InputField playerName;
-
     [Header("Main Menu")]
     public GameObject mainMenu;
+    public string loginSceneName = "LoginScene";
+    public string inventorySceneName = "InventoryScene";
 
     [Header("Matching Menu")]
     public GameObject matchingMenu;
 
+    [Header("Buttons")]
     public Button backButton;
-    public Button quitButton;
-
-    public void OnLoginButtonClicked()
-    {
-        if (playerName.text == null || playerName.text == "")
-        {
-            playerName.placeholder.color = Color.red;
-            return;
-        }
-
-        LoginMenuToMainMenu(true);
-    }
 
     public void OnArenaButtonClicked()
     {
@@ -38,19 +24,14 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnInventoryButtonClicked()
     {
-        SceneManager.LoadScene("InventoryScene");
-    }
-
-    public void OnQuitButtonClicked()
-    {
-        Application.Quit();
+        SceneManager.LoadScene(inventorySceneName);
     }
 
     public void OnBackButtonClicked()
     {
         if (mainMenu.activeSelf)
         {
-            LoginMenuToMainMenu(false);
+            BackToMainMenu();
         }
         else if (matchingMenu.activeSelf)
         {
@@ -58,13 +39,9 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
-    private void LoginMenuToMainMenu(bool value)
+    private void BackToMainMenu()
     {
-        mainMenu.SetActive(value);
-        loginMenu.SetActive(!value);
-
-        backButton.gameObject.SetActive(value);
-        quitButton.gameObject.SetActive(!value);
+        SceneManager.LoadScene(loginSceneName);
     }
 
     private void MainMenuToMatchingMenu(bool value)

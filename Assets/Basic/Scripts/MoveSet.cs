@@ -16,6 +16,10 @@ public abstract class MoveSet : NetworkBehaviour
     [SyncVar]public string moveName1;
     [SyncVar]public string moveName2;
     [SyncVar]public string moveNameUlt;
+
+    public string moveDescription1;
+    public string moveDescription2;
+    public string moveDescriptionUlt;
     //protected
     [SyncVar]public int _cd1 = 0;
     [SyncVar]public int _cd2 = 0;

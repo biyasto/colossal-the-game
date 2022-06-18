@@ -7,8 +7,9 @@ using Mirror.Examples.Basic;
 
 public class Unit : NetworkBehaviour
 {
-   [SyncVar]
+    [SyncVar]
     public string unitName;
+    public string description;
     [SyncVar]
     public int maxHp;
     
