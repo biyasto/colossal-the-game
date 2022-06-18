@@ -10,7 +10,7 @@ public class LobbyPlayer : NetworkBehaviour
     [SyncVar(hook = nameof(HandlePlayerNameUpdate))] public string PlayerName;
     [SyncVar] public int ConnectionId;
     [SyncVar] public int playerNumber;
-
+    [SyncVar] public int playerCharacter;
     [Header("Game Info")]
     public bool IsGameLeader = false;
     [SyncVar(hook = nameof(HandlePlayerReadyStatusUpdate))] public bool IsReady = false;
@@ -40,13 +40,19 @@ public class LobbyPlayer : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
+          
+    }
+
+    public void ChooseCharacter(int index)
+    {
+        this.playerCharacter = index;
     }
     public override void OnStartAuthority()
     {
@@ -216,6 +222,36 @@ public class LobbyPlayer : NetworkBehaviour
     {
         IsReady = !IsReady;
         Debug.Log("Ready status changed for: " + PlayerName);
+    }
+    [Command]
+    public void CmdChooseCharacter(int index)
+    {
+        playerCharacter = index;
+        Debug.Log("Choose character number: " + playerCharacter);
+    }
+    [Command]
+    public void CmdChangeCharacterLeft()
+    {
+        do
+        {
+            playerCharacter++;
+            //TODO: SET MAX CHRACTER/*
+            if (playerCharacter < 0) playerCharacter = 4 ; /*MaxCharacters-1*/
+        } while ( /* !WalletCheck.IsOwnCharacter(playerCharacter)*/ false);
+
+        Debug.Log("Choose character number: " + playerCharacter);
+    }
+    [Command]
+    public void CmdChangeCharacterRight()
+    {
+        do
+        {
+            playerCharacter++;
+            //TODO: SET MAX CHRACTER
+            if (playerCharacter >= 5) playerCharacter = 0;
+        } while ( /* !WalletCheck.IsOwnCharacter(playerCharacter)*/ false);
+
+        Debug.Log("Choose character number: " + playerCharacter);
     }
     [Command]
     public void CmdStartGame()

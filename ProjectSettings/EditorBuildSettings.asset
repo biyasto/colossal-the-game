@@ -8,16 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainScene/CharacterList.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/MainScene/Battle.unity
-    guid: b30904751905d3f4dacde62ac85ec7c2
   - enabled: 1
     path: Assets/Librabry/Web3Unity/Scenes/WalletLogin.unity
     guid: cc28e1075e9584f1698219d041278648
   - enabled: 1
+    path: Assets/Scenes/MainScene/TitleScreen.unity
+    guid: 2e820b7712a391b4eab95d82b3583873
+  - enabled: 0
     path: Assets/Scenes/MainScene/Menu.unity
     guid: 8edeb6fafbecc6e48b82cc81a216219c
   - enabled: 1
-    path: Assets/Scenes/TitleScreen.unity
-    guid: 2e820b7712a391b4eab95d82b3583873
+    path: Assets/Scenes/MainScene/Battle.unity
+    guid: b30904751905d3f4dacde62ac85ec7c2
   m_configObjects: {}

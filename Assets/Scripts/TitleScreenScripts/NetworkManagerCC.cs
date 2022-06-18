@@ -4,13 +4,14 @@ using UnityEngine;
 using Mirror;
 using System;
 using System.Linq;
+using Mirror.Examples.Basic;
 using UnityEngine.SceneManagement;
 
 public class NetworkManagerCC : NetworkManager
 {
     [SerializeField] public int minPlayers = 2;
-    [SerializeField] private LobbyPlayer lobbyPlayerPrefab;
-    [SerializeField] private GamePlayer gamePlayerPrefab;
+    [SerializeField] public LobbyPlayer lobbyPlayerPrefab;
+    [SerializeField] public GamePlayer gamePlayerPrefab;
     public List<LobbyPlayer> LobbyPlayers { get; } = new List<LobbyPlayer>();
     public List<GamePlayer> GamePlayers { get; } = new List<GamePlayer>();
     public string CurrentGamePhase;
@@ -69,7 +70,6 @@ public class NetworkManagerCC : NetworkManager
             lobbyPlayerInstance.IsGameLeader = isGameLeader;
             lobbyPlayerInstance.ConnectionId = conn.connectionId;
             lobbyPlayerInstance.playerNumber = LobbyPlayers.Count + 1;
-
             NetworkServer.AddPlayerForConnection(conn, lobbyPlayerInstance.gameObject);
             Debug.Log("Player added. Player name: " + lobbyPlayerInstance.PlayerName + ". Player connection id: " + lobbyPlayerInstance.ConnectionId.ToString());
         }
@@ -95,7 +95,7 @@ public class NetworkManagerCC : NetworkManager
     public override void ServerChangeScene(string newSceneName)
     {
         //Changing from the menu to the scene
-        if (SceneManager.GetActiveScene().name == "TitleScreen" && newSceneName == "Gameplay")
+        if (SceneManager.GetActiveScene().name == "TitleScreen" && newSceneName == "Battle")
         {
             Debug.Log("Changing scene to: " + newSceneName);
             for (int i = LobbyPlayers.Count - 1; i >= 0; i--)
@@ -104,9 +104,9 @@ public class NetworkManagerCC : NetworkManager
                 var gamePlayerInstance = Instantiate(gamePlayerPrefab);
 
                 gamePlayerInstance.SetPlayerName(LobbyPlayers[i].PlayerName);
-                gamePlayerInstance.SetConnectionId(LobbyPlayers[i].ConnectionId);
+               gamePlayerInstance.SetConnectionId(LobbyPlayers[i].ConnectionId);
                 gamePlayerInstance.SetPlayerNumber(LobbyPlayers[i].playerNumber);
-
+                gamePlayerInstance.SetCharacter(LobbyPlayers[i].playerCharacter);
                 NetworkServer.Destroy(conn.identity.gameObject);
                 NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject, true);
                 Debug.Log("Spawned new GamePlayer.");

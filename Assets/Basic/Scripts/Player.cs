@@ -11,12 +11,12 @@ namespace Mirror.Examples.Basic
         public NetworkIdentity UnitNetworkIdentity;
         static public  uint Player1NetID=0 ;
         static public  uint Player2NetID=0 ;
-
+        [SyncVar] public int ConnectionId;
         [SyncVar] public BattleHandler battleHandler;
         // Events that the PlayerUI will subscribe to
-        public event System.Action<byte> OnPlayerNumberChanged;
+        /*public event System.Action<byte> OnPlayerNumberChanged;
         public event System.Action<Color32> OnPlayerColorChanged;
-        public event System.Action<ushort> OnPlayerDataChanged;
+        public event System.Action<ushort> OnPlayerDataChanged;*/
 
         // Players List to manage playerNumber
         public static readonly List<Player> playersList = new List<Player>();
@@ -34,22 +34,23 @@ namespace Mirror.Examples.Basic
         /// <summary>
         /// This is appended to the player name text, e.g. "Player 01"
         /// </summary>
-        [SyncVar(hook = nameof(PlayerNumberChanged))]
+    //    [SyncVar(hook = nameof(PlayerNumberChanged))]
         public byte playerNumber = 0;
 
         /// <summary>
         /// Random color for the playerData text, assigned in OnStartServer
         /// </summary>
-        [SyncVar(hook = nameof(PlayerColorChanged))]
+       // [SyncVar(hook = nameof(PlayerColorChanged))]
         public Color32 playerColor = Color.white;
 
         /// <summary>
         /// This is updated by UpdateData which is called from OnStartServer via InvokeRepeating
         /// </summary>
-        [SyncVar(hook = nameof(PlayerDataChanged))]
+        //[SyncVar(hook = nameof(PlayerDataChanged))]
         public ushort playerData = 0;
 
         // This is called by the hook of playerNumber SyncVar above
+        /*
         void PlayerNumberChanged(byte _, byte newPlayerNumber)
         {
             OnPlayerNumberChanged?.Invoke(newPlayerNumber);
@@ -66,6 +67,7 @@ namespace Mirror.Examples.Basic
         {
             OnPlayerDataChanged?.Invoke(newPlayerData);
         }
+        */
 
         #endregion
 
@@ -137,14 +139,14 @@ namespace Mirror.Examples.Basic
             playerUI = playerUIObject.GetComponent<PlayerUI>();
 
             // wire up all events to handlers in PlayerUI
-            OnPlayerNumberChanged = playerUI.OnPlayerNumberChanged;
+            /*OnPlayerNumberChanged = playerUI.OnPlayerNumberChanged;
             OnPlayerColorChanged = playerUI.OnPlayerColorChanged;
             OnPlayerDataChanged = playerUI.OnPlayerDataChanged;
 
             // Invoke all event handlers with the initial data from spawn payload
             OnPlayerNumberChanged.Invoke(playerNumber);
             OnPlayerColorChanged.Invoke(playerColor);
-            OnPlayerDataChanged.Invoke(playerData);
+            OnPlayerDataChanged.Invoke(playerData);*/
 
             
            
@@ -184,14 +186,20 @@ namespace Mirror.Examples.Basic
         public override void OnStopClient()
         {
             // disconnect event handlers
+            /*
             OnPlayerNumberChanged = null;
             OnPlayerColorChanged = null;
             OnPlayerDataChanged = null;
+            */
 
             // Remove this player's UI object
             Destroy(playerUIObject);
         }
 
         #endregion
+        public void SetConnectionId(int connId)
+        {
+         //   this.UnitNetworkIdentity = connId;
+        }
     }
 }

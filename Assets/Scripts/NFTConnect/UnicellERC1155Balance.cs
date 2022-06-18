@@ -7,7 +7,7 @@ public class UnicellERC1155Balance: MonoBehaviour
 {
     public string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
 
-    public bool isUnicellAvailable;
+    public bool isAvailable;
 
     async void Start()
     {
@@ -23,10 +23,10 @@ public class UnicellERC1155Balance: MonoBehaviour
 
             if (balanceOf > 0)
         
-         isUnicellAvailable = true;
+         isAvailable = true;
 
         
-        else isUnicellAvailable = false;
+        else isAvailable = false;
       
     }
 }
