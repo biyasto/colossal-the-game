@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EntERC1155Balance : MonoBehaviour, ICharacterToken
 {
-    public string tokenId = "19928718629562379247015131315189570608910795369549818420571239617849670500362";
+    public string tokenId = "19928718629562379247015131315189570608910795369549818420571239618949182128138";
     public string contract = "0x2953399124F0cBB46d2CbACD8A89cF0599974963";
 
     public bool isAvailable;

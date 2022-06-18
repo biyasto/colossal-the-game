@@ -28,7 +28,7 @@ public class UnicellERC1155Balance: MonoBehaviour, ICharacterToken
         string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
 
         BigInteger balanceOf = await ERC1155.BalanceOf(chain, network, contract, account, tokenId);
-        print(balanceOf);
+        print($"{unitPrefab.name}: {balanceOf}");
 
         if (balanceOf > 0)
         {
