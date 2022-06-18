@@ -171,11 +171,11 @@ namespace Mirror.Examples.Basic
         /// Called when the local player object is being stopped.
         /// <para>This happens before OnStopClient(), as it may be triggered by an ownership message from the server, or because the player object is being destroyed. This is an appropriate place to deactivate components or functionality that should only be active for the local player, such as cameras and input.</para>
         /// </summary>
-        public override void OnStopLocalPlayer()
+        /*public override void OnStopLocalPlayer()
         {
             // Disable the main panel for local player
             CanvasUI.instance.mainPanel.gameObject.SetActive(false);
-        }
+        }*/
 
         /// <summary>
         /// This is invoked on clients when the server has caused this object to be destroyed.

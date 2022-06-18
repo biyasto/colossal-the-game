@@ -33,7 +33,7 @@ public class BattleSystemNetworkManager : NetworkManager
         state = NetworkState.ServerEnd;
         Debug.Log(("Server Stop!"));
     }
-    public override void OnServerAddPlayer(NetworkConnectionToClient conn)
+    public  void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         // add player at correct spawn position
         GameObject player = Instantiate(playerPrefab);
