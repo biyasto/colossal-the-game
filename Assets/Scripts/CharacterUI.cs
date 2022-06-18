@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CharacterUI : MonoBehaviour
@@ -26,6 +27,11 @@ public class CharacterUI : MonoBehaviour
     public Sprite defaultCharacter;
     public float localScale = 0.5f;
     public float defaultAlpha = 0.55f;
+
+    public bool isShowAll = false;
+
+    [Header("Buttons")]
+    public string mainMenuScene = "MainMenuScene";
 
     private void Start()
     {
@@ -57,7 +63,7 @@ public class CharacterUI : MonoBehaviour
 
         characterName.text = character.characterName;
         description.text = character.description;
-        
+
         hp.text = $"{character.hp.ToString()} HP";
         atk.text = character.atk.ToString();
         prt.text = character.prt.ToString();
@@ -104,6 +110,22 @@ public class CharacterUI : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             skillUIs[i].SetSkillUI(character.skills[i]);
+        }
+    }
+
+    public void OnBackButtonClicked()
+    {
+        SceneManager.LoadScene(mainMenuScene);
+    }
+
+    public void OnShowAllButtonClicked()
+    {
+        isShowAll = !isShowAll;
+
+        if (isShowAll)
+        {
+
+            SetCharacterUI(inventory.currentCharacterIndex);
         }
     }
 }

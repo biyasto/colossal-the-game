@@ -9,6 +9,7 @@ public class Unit : NetworkBehaviour
 {
     [SyncVar]
     public string unitName;
+    public string description;
     [SyncVar]
     public int maxHp;
     
