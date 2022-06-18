@@ -29,37 +29,49 @@ public class CharacterUI : MonoBehaviour
     public float defaultAlpha = 0.55f;
 
     public bool isShowAll = false;
+    private List<Character> characters = new List<Character>();
+    private int currentCharacterIndex = 0;
 
     [Header("Buttons")]
     public string mainMenuScene = "MainMenuScene";
 
     private void Start()
     {
+        Inventory.Initialize();
+        characters = Inventory.ownedCharacters;
         SetCharacterUI(0);
     }
 
 
     public void ChooseNextCharacter()
     {
-        if (inventory.currentCharacterIndex < inventory.characters.Count - 1)
+        if (currentCharacterIndex < characters.Count - 1)
         {
-            inventory.currentCharacterIndex++;
-            SetCharacterUI(inventory.currentCharacterIndex);
+            currentCharacterIndex++;
+            SetCharacterUI(currentCharacterIndex);
         }
     }
 
     public void ChoosePreCharacter()
     {
-        if (inventory.currentCharacterIndex > 0)
+        if (currentCharacterIndex > 0)
         {
-            inventory.currentCharacterIndex--;
-            SetCharacterUI(inventory.currentCharacterIndex);
+            currentCharacterIndex--;
+            SetCharacterUI(currentCharacterIndex);
         }
     }
 
     public void SetCharacterUI(int characterIndex)
     {
-        var character = inventory.characters[characterIndex];
+        if (characters.Count == 0)
+        {
+            SetDefaultCharacter(preCharacter);
+            SetDefaultCharacter(curCharacter);
+            SetDefaultCharacter(nextCharacter);
+            return;
+        }
+
+        var character = characters[characterIndex];
 
         characterName.text = character.characterName;
         description.text = character.description;
@@ -69,9 +81,10 @@ public class CharacterUI : MonoBehaviour
         prt.text = character.prt.ToString();
 
         curCharacter.sprite = character.sprite;
+
         if (characterIndex != 0)
         {
-            preCharacter.sprite = inventory.characters[characterIndex - 1].sprite;
+            preCharacter.sprite = characters[characterIndex - 1].sprite;
             preCharacter.transform.localScale = new Vector3(1, 1, 1);
 
             var tempColor = preCharacter.color;
@@ -80,37 +93,37 @@ public class CharacterUI : MonoBehaviour
         }
         else
         {
-            preCharacter.sprite = defaultCharacter;
-            preCharacter.transform.localScale = new Vector2(localScale, localScale);
-
-            var tempColor = preCharacter.color;
-            tempColor.a = 1.0f;
-            preCharacter.color = tempColor;
+            SetDefaultCharacter(preCharacter);
         }
 
-        if (characterIndex != inventory.characters.Count - 1)
+        if (characterIndex != characters.Count - 1)
         {
-            nextCharacter.sprite = inventory.characters[characterIndex + 1].sprite;
+            nextCharacter.sprite = characters[characterIndex + 1].sprite;
             nextCharacter.transform.localScale = new Vector3(1, 1, 1);
 
-            var tempColor = preCharacter.color;
+            var tempColor = nextCharacter.color;
             tempColor.a = defaultAlpha;
             nextCharacter.color = tempColor;
         }
         else
         {
-            nextCharacter.sprite = defaultCharacter;
-            nextCharacter.transform.localScale = new Vector2(localScale, localScale);
-
-            var tempColor = nextCharacter.color;
-            tempColor.a = 1.0f;
-            nextCharacter.color = tempColor;
+            SetDefaultCharacter(nextCharacter);
         }
 
         for (int i = 0; i < 3; i++)
         {
             skillUIs[i].SetSkillUI(character.skills[i]);
         }
+    }
+
+    private void SetDefaultCharacter(Image image)
+    {
+        image.sprite = defaultCharacter;
+        image.transform.localScale = new Vector2(localScale, localScale);
+
+        var tempColor = image.color;
+        tempColor.a = 1.0f;
+        image.color = tempColor;
     }
 
     public void OnBackButtonClicked()
@@ -122,10 +135,17 @@ public class CharacterUI : MonoBehaviour
     {
         isShowAll = !isShowAll;
 
+        currentCharacterIndex = 0;
+
         if (isShowAll)
         {
-
-            SetCharacterUI(inventory.currentCharacterIndex);
+            characters = Inventory.characters;
         }
+        else
+        {
+            characters = Inventory.ownedCharacters;
+        }
+
+        SetCharacterUI(currentCharacterIndex);
     }
 }

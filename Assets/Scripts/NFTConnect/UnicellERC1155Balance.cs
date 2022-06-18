@@ -12,25 +12,29 @@ public class UnicellERC1155Balance: MonoBehaviour, ICharacterToken
     public bool IsAvailable => isAvailable;
 
 
-    async void Start()
+    private void Start()
     {
-       
-            string chain = "polygon";
-            string network = "testnet";
-            string contract = "0x2953399124F0cBB46d2CbACD8A89cF0599974963";
-            string account = PlayerPrefs.GetString("Account");
-            string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
+        CheckAvailable();
+    }
 
-            BigInteger balanceOf = await ERC1155.BalanceOf(chain, network, contract, account, tokenId);
-            print(balanceOf);
+    public async void CheckAvailable()
+    {
+        string chain = "polygon";
+        string network = "testnet";
+        string contract = "0x2953399124F0cBB46d2CbACD8A89cF0599974963";
+        string account = PlayerPrefs.GetString("Account");
+        string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
 
-            if (balanceOf > 0)
+        BigInteger balanceOf = await ERC1155.BalanceOf(chain, network, contract, account, tokenId);
+        print(balanceOf);
 
-         isAvailable = true;
-
-
-        
-        else isAvailable = false;
-      
+        if (balanceOf > 0)
+        {
+            isAvailable = true;
+        }
+        else
+        {
+            isAvailable = false;
+        }
     }
 }

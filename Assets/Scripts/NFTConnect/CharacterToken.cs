@@ -5,4 +5,5 @@ using UnityEngine;
 public interface ICharacterToken
 {
     public bool IsAvailable { get; }
+    public void CheckAvailable();
 }

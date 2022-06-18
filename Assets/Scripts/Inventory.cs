@@ -24,11 +24,10 @@ public class Character
 
 public class Inventory : MonoBehaviour
 {
-    public List<Character> ownedCharacters = new List<Character>(5);
-    public List<Character> characters = new List<Character>(5);
-    public int currentCharacterIndex = 0;
+    public static List<Character> ownedCharacters = new List<Character>(5);
+    public static List<Character> characters = new List<Character>(5);
 
-    private void Start()
+    public static void Initialize()
     {
         var unitPrefabs = Resources.LoadAll<GameObject>("Characters");
 
@@ -36,9 +35,9 @@ public class Inventory : MonoBehaviour
         {
             var character = ConvertUnitToCharacter(unitPrefab.GetComponent<Unit>());
             ConvertMovesetToSkill(character, unitPrefab.GetComponent<MoveSet>());
-            Debug.Log(character.skills.Count);
 
             var characterToken = unitPrefab.GetComponent<ICharacterToken>();
+            //characterToken.CheckAvailable();
             if (characterToken.IsAvailable)
             {
                 ownedCharacters.Add(character);
@@ -47,7 +46,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private Character ConvertUnitToCharacter(Unit unit)
+    private static Character ConvertUnitToCharacter(Unit unit)
     {
         var character = new Character();
         character.characterName = unit.unitName;
@@ -59,7 +58,7 @@ public class Inventory : MonoBehaviour
         return character;
     }
 
-    private void ConvertMovesetToSkill(Character character, MoveSet moveset)
+    private static void ConvertMovesetToSkill(Character character, MoveSet moveset)
     {
         var skills = new List<Skill>();
 
