@@ -74,12 +74,13 @@ public class NetworkManagerCC : NetworkManager
             Debug.Log("Player added. Player name: " + lobbyPlayerInstance.PlayerName + ". Player connection id: " + lobbyPlayerInstance.ConnectionId.ToString());
         }
     }
+    
     public void StartGame()
     {
         if (CanStartGame() && SceneManager.GetActiveScene().name == "TitleScreen")
         {
             ServerChangeScene("Battle");
-        }
+        } //Todo:
     }
     private bool CanStartGame()
     {
@@ -99,14 +100,14 @@ public class NetworkManagerCC : NetworkManager
         {
             Debug.Log("Changing scene to: " + newSceneName);
             for (int i = LobbyPlayers.Count - 1; i >= 0; i--)
-            {
+            { 
                 var conn = LobbyPlayers[i].connectionToClient;
                 var gamePlayerInstance = Instantiate(gamePlayerPrefab);
-
-                gamePlayerInstance.SetPlayerName(LobbyPlayers[i].PlayerName);
+                
+                /*gamePlayerInstance.SetPlayerName(LobbyPlayers[i].PlayerName);
                gamePlayerInstance.SetConnectionId(LobbyPlayers[i].ConnectionId);
                 gamePlayerInstance.SetPlayerNumber(LobbyPlayers[i].playerNumber);
-                gamePlayerInstance.SetCharacter(LobbyPlayers[i].playerCharacter);
+                gamePlayerInstance.SetCharacter(LobbyPlayers[i].playerCharacter);*/
                 NetworkServer.Destroy(conn.identity.gameObject);
                 NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject, true);
                 Debug.Log("Spawned new GamePlayer.");
