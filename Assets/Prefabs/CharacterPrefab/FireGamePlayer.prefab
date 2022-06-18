@@ -135,6 +135,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   unitName: Fire Jar
+  description: He was a man who knew neither anger nor hatred, he had thought. Until
+    gangs of bandits, after killing his wife, threw him into a pool of lava, his
+    rage raging and hotter than lava. He frantically swept everything to relieve
+    his hatred. Shall he be able to escape this form by doing so?
   maxHp: 400
   currentHp: 400
   atk: 50
@@ -156,3 +160,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b56ea626551d8b4b933640103838622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cd1Max: 1
+  cd2Max: 3
+  cdUltMax: 1
+  moveName1: Damning Burn
+  moveName2: Burst from the Ashes
+  moveNameUlt: Fire of Delight
+  moveDescription1: 
+  moveDescription2: 
+  moveDescriptionUlt: 
+  _cd1: 0
+  _cd2: 0
+  _cdUlt: 0

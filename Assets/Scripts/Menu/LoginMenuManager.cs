@@ -20,6 +20,8 @@ public class LoginMenuManager : MonoBehaviour
             return;
         }
 
+        Inventory.Initialize();
+
         SwitchToMainMenu();
     }
 

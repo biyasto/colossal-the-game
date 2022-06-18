@@ -22,6 +22,13 @@ public class Character
     public List<Skill> skills = new List<Skill>(3);
 }
 
+[System.Serializable]
+public struct UnitAttachToken
+{
+    public GameObject unitPrefab;
+    public GameObject characterToken;
+}
+
 public class Inventory : MonoBehaviour
 {
     public static List<Character> ownedCharacters = new List<Character>(5);
@@ -29,16 +36,17 @@ public class Inventory : MonoBehaviour
 
     public static void Initialize()
     {
-        var unitPrefabs = Resources.LoadAll<GameObject>("Characters");
-
-        foreach (var unitPrefab in unitPrefabs)
+        var characterTokens = Resources.LoadAll<GameObject>("UnitToken");
+        foreach (var characterToken in characterTokens)
         {
+            var unitToken = characterToken.GetComponent<ICharacterToken>();
+            var unitPrefab = unitToken.UnitPrefab;
+
             var character = ConvertUnitToCharacter(unitPrefab.GetComponent<Unit>());
             ConvertMovesetToSkill(character, unitPrefab.GetComponent<MoveSet>());
 
-            var characterToken = unitPrefab.GetComponent<ICharacterToken>();
-            //characterToken.CheckAvailable();
-            if (characterToken.IsAvailable)
+            unitToken.CheckAvailable();
+            if (unitToken.IsAvailable)
             {
                 ownedCharacters.Add(character);
             }

@@ -38,7 +38,7 @@ public class CharacterUI : MonoBehaviour
     private void Start()
     {
         Inventory.Initialize();
-        characters = Inventory.ownedCharacters;
+        characters = Inventory.characters;
         SetCharacterUI(0);
     }
 

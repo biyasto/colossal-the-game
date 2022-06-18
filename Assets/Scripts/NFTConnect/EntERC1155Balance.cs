@@ -1,13 +1,13 @@
 using System.Collections;
-using System.Numerics;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
-public class UnicellERC1155Balance: MonoBehaviour, ICharacterToken
+public class EntERC1155Balance : MonoBehaviour, ICharacterToken
 {
-    public string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
+    public string tokenId = "19928718629562379247015131315189570608910795369549818420571239617849670500362";
+    public string contract = "0x2953399124F0cBB46d2CbACD8A89cF0599974963";
 
-  
     public bool isAvailable;
     public bool IsAvailable => isAvailable;
 
@@ -23,9 +23,7 @@ public class UnicellERC1155Balance: MonoBehaviour, ICharacterToken
     {
         string chain = "polygon";
         string network = "testnet";
-        string contract = "0x2953399124F0cBB46d2CbACD8A89cF0599974963";
         string account = PlayerPrefs.GetString("Account");
-        string tokenId = "38943131031766143704984983154691040388593436270428817556432674370870428303370";
 
         BigInteger balanceOf = await ERC1155.BalanceOf(chain, network, contract, account, tokenId);
         print(balanceOf);

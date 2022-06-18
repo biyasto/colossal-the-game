@@ -84,6 +84,10 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   unitName: Elder Ent
+  description: Kindness, tolerance, and wisdom. Tens of thousands of beings in the
+    great forest have existed peacefully under his protective arms for thousands
+    of years. His generosity is so narrow to only one person. The one he swore with
+    all his might must return the blood of the great forest one day.
   maxHp: 560
   currentHp: 560
   atk: 40
@@ -105,6 +109,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e659612fee1d9b748808a6227a5de78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cd1Max: 1
+  cd2Max: 1
+  cdUltMax: 3
+  moveName1: Commandments of the Ancients
+  moveName2: Clove
+  moveNameUlt: Retribution from the Great Forest
+  moveDescription1: 
+  moveDescription2: 
+  moveDescriptionUlt: 
+  _cd1: 0
+  _cd2: 0
+  _cdUlt: 0
 --- !u!212 &3541111308583149053
 SpriteRenderer:
   m_ObjectHideFlags: 0
