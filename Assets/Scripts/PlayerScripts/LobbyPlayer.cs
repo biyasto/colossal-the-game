@@ -46,7 +46,11 @@ public class LobbyPlayer : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        //TODO: delete debug
+        if (isLocalPlayer && Input.GetKeyDown(KeyCode.A))
+        {
+            CmdChangeCharacterRight();
+        }
           
     }
 

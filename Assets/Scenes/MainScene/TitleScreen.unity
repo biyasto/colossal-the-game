@@ -3706,6 +3706,16 @@ MonoBehaviour:
     type: 3}
   gamePlayerPrefab: {fileID: 8014915289214459393, guid: cef153ee62778fc48be914a5ba4c4681,
     type: 3}
+  botPlayerPrefab: {fileID: -4724220629007027297, guid: b480e81eca843984a86c4e93ce6c02d5,
+    type: 3}
+  entPlayerPrefab: {fileID: -7857396466848137113, guid: 90ac40cc76928ab4faa60bc3f1030115,
+    type: 3}
+  firePlayerPrefab: {fileID: 1333460914394511556, guid: 93a5b0c79dcb40d4ab3170a8d4bcb909,
+    type: 3}
+  piecePlayerPrefab: {fileID: -3577739461529349030, guid: bdade69eae244434494e7c9cdc975d5e,
+    type: 3}
+  unicellPlayerPrefab: {fileID: 8259847053737845244, guid: a55c82b6829f6b94aa17711aae6cc1f3,
+    type: 3}
   CurrentGamePhase: 
 --- !u!4 &817632463
 Transform:

@@ -13,13 +13,13 @@ public class Unit : NetworkBehaviour
     [SyncVar]
     public int maxHp;
     
-    [SyncVar(hook = nameof(UnitHpChanged))]
+   // [SyncVar(hook = nameof(UnitHpChanged))]
     public int currentHp;
-    [SyncVar(hook = nameof(UnitAtkChanged))]
+    //[SyncVar(hook = nameof(UnitAtkChanged))]
     public int atk;
-    [SyncVar(hook = nameof(UnitPrtChanged))]
+    //[SyncVar(hook = nameof(UnitPrtChanged))]
     public int prt;
-    [SyncVar(hook = nameof(UnitTtdChanged))]
+   // [SyncVar(hook = nameof(UnitTtdChanged))]
     public int ttd;
    
     [SyncVar]
@@ -37,8 +37,8 @@ public class Unit : NetworkBehaviour
     public event System.Action<int> OnUnitPrtChanged;
 
     public MoveSet moveSet;
-    public Player playerObj;
-    void UnitAtkChanged(int _, int newNumber)
+    //public Player playerObj;
+    /*void UnitAtkChanged(int _, int newNumber)
     {
         OnUnitAtkChanged?.Invoke(newNumber);
     }
@@ -53,7 +53,7 @@ public class Unit : NetworkBehaviour
     void UnitPrtChanged(int _, int newNumber)
     {
         OnUnitPrtChanged?.Invoke(newNumber);
-    }
+    }*/
     private void Start()
     {
        // moveset = GetComponent<MoveSet>();
@@ -62,9 +62,9 @@ public class Unit : NetworkBehaviour
     {
         Debug.Log("OnStartClient");
 
-        // Instantiate the player UI as child of the Players Panel
+        /*// Instantiate the player UI as child of the Players Panel
         /*playerUIObject = Instantiate(playerUIPrefab, CanvasUI.instance.playersPanel);
-        playerUI = playerUIObject.GetComponent<PlayerUI>(); */
+        playerUI = playerUIObject.GetComponent<PlayerUI>(); #1#
 
         // wire up all events to handlers in PlayerUI
         OnUnitHpChanged = playerObj.playerUI.OnUnitHpChanged;
@@ -75,26 +75,26 @@ public class Unit : NetworkBehaviour
         OnUnitHpChanged.Invoke(currentHp);
         OnUnitAtkChanged.Invoke(atk);
         OnUnitPrtChanged.Invoke(prt);
-        OnUnitTtdChanged.Invoke(ttd);
+        OnUnitTtdChanged.Invoke(ttd);*/
     }
 
     [Command]
     public void CommandEndTurn()
     {
        
-         this.playerObj.battleHandler.Endturn();
+        // this.playerObj.battleHandler.Endturn();
      
     }
 
     [Client]
     public bool AuthCheck()
     {
-        if (playerObj.battleHandler.state == BattleStates.Player1Turn)
+      //  if (playerObj.battleHandler.state == BattleStates.Player1Turn)
         {
             if (netId != Player.Player1NetID) return false;
             return true;
         }
-        else if (playerObj.battleHandler.state == BattleStates.Player2Turn)
+       // else if (playerObj.battleHandler.state == BattleStates.Player2Turn)
         {
             if (netId != Player.Player2NetID) return false;
             return true;
@@ -146,7 +146,7 @@ public class Unit : NetworkBehaviour
 
      
 
-        if (isLocalPlayer && playerObj.battleHandler)
+        /*if (isLocalPlayer && playerObj.battleHandler)
         {
             if (playerObj.battleHandler.hasAuthority && Input.GetKeyDown(KeyCode.A))
             {
@@ -157,7 +157,7 @@ public class Unit : NetworkBehaviour
                 DamageEnemy(10,GetEnemyNetID());
               
             }
-        }
+        }*/
     }
    
 

@@ -11,7 +11,14 @@ public class NetworkManagerCC : NetworkManager
 {
     [SerializeField] public int minPlayers = 2;
     [SerializeField] public LobbyPlayer lobbyPlayerPrefab;
+    
+    [Header("Characters Prefab")]
     [SerializeField] public GamePlayer gamePlayerPrefab;
+    [SerializeField] public GamePlayer botPlayerPrefab;
+    [SerializeField] public GamePlayer entPlayerPrefab;
+    [SerializeField] public GamePlayer firePlayerPrefab;
+    [SerializeField] public GamePlayer piecePlayerPrefab;
+    [SerializeField] public GamePlayer unicellPlayerPrefab;
     public List<LobbyPlayer> LobbyPlayers { get; } = new List<LobbyPlayer>();
     public List<GamePlayer> GamePlayers { get; } = new List<GamePlayer>();
     public string CurrentGamePhase;
@@ -102,12 +109,32 @@ public class NetworkManagerCC : NetworkManager
             for (int i = LobbyPlayers.Count - 1; i >= 0; i--)
             { 
                 var conn = LobbyPlayers[i].connectionToClient;
-                var gamePlayerInstance = Instantiate(gamePlayerPrefab);
+                GamePlayer gamePlayerInstance;
+                switch (LobbyPlayers[i].playerCharacter)
+                {
+                        case 0: gamePlayerInstance = Instantiate(botPlayerPrefab);
+                            break;
+                        case 1:gamePlayerInstance = Instantiate(entPlayerPrefab);
+                            break;
+                        case 2:gamePlayerInstance = Instantiate(firePlayerPrefab);
+                            break;
+                        case 3:gamePlayerInstance = Instantiate(piecePlayerPrefab);
+                            break;
+                        case 4:gamePlayerInstance = Instantiate(unicellPlayerPrefab);
+                            break;
+                        default: gamePlayerInstance = Instantiate(gamePlayerPrefab);
+                            break;
+                        
+                }
+               
                 
-                /*gamePlayerInstance.SetPlayerName(LobbyPlayers[i].PlayerName);
+              //  var gamePlayerInstance = Instantiate(gamePlayerPrefab);
+                
+                gamePlayerInstance.SetPlayerName(LobbyPlayers[i].PlayerName);
                gamePlayerInstance.SetConnectionId(LobbyPlayers[i].ConnectionId);
                 gamePlayerInstance.SetPlayerNumber(LobbyPlayers[i].playerNumber);
-                gamePlayerInstance.SetCharacter(LobbyPlayers[i].playerCharacter);*/
+                gamePlayerInstance.SetCharacter(LobbyPlayers[i].playerCharacter);
+                
                 NetworkServer.Destroy(conn.identity.gameObject);
                 NetworkServer.ReplacePlayerForConnection(conn, gamePlayerInstance.gameObject, true);
                 Debug.Log("Spawned new GamePlayer.");
