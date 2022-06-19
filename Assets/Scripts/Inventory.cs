@@ -22,24 +22,31 @@ public class Character
     public List<Skill> skills = new List<Skill>(3);
 }
 
+[System.Serializable]
+public struct UnitAttachToken
+{
+    public GameObject unitPrefab;
+    public GameObject characterToken;
+}
+
 public class Inventory : MonoBehaviour
 {
-    public List<Character> ownedCharacters = new List<Character>(5);
-    public List<Character> characters = new List<Character>(5);
-    public int currentCharacterIndex = 0;
+    public static List<Character> ownedCharacters = new List<Character>(5);
+    public static List<Character> characters = new List<Character>(5);
 
-    private void Start()
+    public static void Initialize()
     {
-        var unitPrefabs = Resources.LoadAll<GameObject>("Characters");
-
-        foreach (var unitPrefab in unitPrefabs)
+        var characterTokens = Resources.LoadAll<GameObject>("UnitToken");
+        foreach (var characterToken in characterTokens)
         {
+            var unitToken = characterToken.GetComponent<ICharacterToken>();
+            var unitPrefab = unitToken.UnitPrefab;
+
             var character = ConvertUnitToCharacter(unitPrefab.GetComponent<Unit>());
             ConvertMovesetToSkill(character, unitPrefab.GetComponent<MoveSet>());
-            Debug.Log(character.skills.Count);
 
-            var characterToken = unitPrefab.GetComponent<ICharacterToken>();
-            if (characterToken.IsAvailable)
+            unitToken.CheckAvailable();
+            if (unitToken.IsAvailable)
             {
                 ownedCharacters.Add(character);
             }
@@ -47,7 +54,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private Character ConvertUnitToCharacter(Unit unit)
+    private static Character ConvertUnitToCharacter(Unit unit)
     {
         var character = new Character();
         character.characterName = unit.unitName;
@@ -59,7 +66,7 @@ public class Inventory : MonoBehaviour
         return character;
     }
 
-    private void ConvertMovesetToSkill(Character character, MoveSet moveset)
+    private static void ConvertMovesetToSkill(Character character, MoveSet moveset)
     {
         var skills = new List<Skill>();
 

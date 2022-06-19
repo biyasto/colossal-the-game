@@ -117,6 +117,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   unitName: Servent Bot
+  description: 
   maxHp: 400
   currentHp: 400
   atk: 25
@@ -140,7 +141,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  PlayerName: 
+  PlayerName: His owner was a wealthy but miserly collector. He is so afraid of betrayal
+    that all the servants in his mansion are robots. However, he could not have imagined
+    that the fire of greed sprang up in the eyes of an inanimate robot. That mechanical
+    servant stole one of the most valuable treasures, the Compass of Fate.
   ConnectionId: 0
   playerNumber: 0
   playerCharacter: 0
@@ -156,3 +160,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc4f53ea44f1974aa7e058606d1d784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  cd1Max: 1
+  cd2Max: 2
+  cdUltMax: 5
+  moveName1: Fortune smiles upon fools
+  moveName2: Back to old ways
+  moveNameUlt: "Murphy\u2019s Insurance"
+  moveDescription1: 
+  moveDescription2: 
+  moveDescriptionUlt: 
+  _cd1: 0
+  _cd2: 0
+  _cdUlt: 0

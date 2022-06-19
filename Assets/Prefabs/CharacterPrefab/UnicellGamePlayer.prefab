@@ -84,6 +84,9 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   unitName: Giant Unicell
+  description: It doesn't know what it is. It only knows a few things through the
+    people or things it has absorbed. Those memories and even its ability itself
+    told that it was a cell of a giant immortal being.
   maxHp: 250
   currentHp: 250
   atk: 80
@@ -158,12 +161,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  cd1Max: 0
-  cd2Max: 0
-  cdUltMax: 0
-  moveName1: 
-  moveName2: 
-  moveNameUlt: 
+  cd1Max: 1
+  cd2Max: 1
+  cdUltMax: 1
+  moveName1: Cell Reunion
+  moveName2: See Through Heart
+  moveNameUlt: Pain Digestion
+  moveDescription1: 
+  moveDescription2: 
+  moveDescriptionUlt: 
   _cd1: 0
   _cd2: 0
   _cdUlt: 0

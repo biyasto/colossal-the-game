@@ -1199,6 +1199,49 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 918554915477354326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &899947459
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899947461}
+  - component: {fileID: 899947460}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &899947460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899947459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec05f5813efc4df4f975addc75ae2e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &899947461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899947459}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009157294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,13 +1485,15 @@ MonoBehaviour:
   - {fileID: 772923828}
   - {fileID: 224814846}
   - {fileID: 638450054}
-  inventory: {fileID: 2036546942}
+  inventory: {fileID: 0}
   curCharacter: {fileID: 2092879239}
   preCharacter: {fileID: 1570240834}
   nextCharacter: {fileID: 1905944788}
   defaultCharacter: {fileID: 21300000, guid: f9ffa3a7bf3a64c44b632fba01d4aff9, type: 3}
   localScale: 0.5
   defaultAlpha: 0.75
+  isShowAll: 0
+  mainMenuScene: MainMenuScene
 --- !u!4 &1294905864
 Transform:
   m_ObjectHideFlags: 0
@@ -1461,7 +1506,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299665758
 GameObject:
@@ -2746,7 +2791,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1837629840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1294905863}
+        m_TargetAssemblyTypeName: CharacterUI, Assembly-CSharp
+        m_MethodName: OnShowAllButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1837629840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2994,146 +3051,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905944786}
   m_CullTransparentMesh: 1
---- !u!1 &2036546941
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2036546943}
-  - component: {fileID: 2036546942}
-  m_Layer: 0
-  m_Name: Inventory Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2036546942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036546941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec05f5813efc4df4f975addc75ae2e1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characters:
-  - characterName: 'A Piece of Holy See '
-    description: 'Humanity in general and Catholics in particular will never forget
-      the most devastating event in history. After a century, the Holy See is now
-      a ruin. It was strange that the land was still not full of blood and smelled
-      strong. But then tonight the terror will return. '
-    sprite: {fileID: 21300000, guid: f165843583b5a724bb9aae868b136296, type: 3}
-    hp: 100
-    atk: 10
-    prt: 10
-    skills:
-    - skillName: 'Christening '
-      description: ABC
-      cooldown: 1
-    - skillName: 'Blessing '
-      description: ABC
-      cooldown: 3
-    - skillName: The Curse
-      description: ABC
-      cooldown: 3
-  - characterName: Elden Ent
-    description: Kindness, tolerance, and wisdom. Tens of thousands of beings in
-      the great forest have existed peacefully under his protective arms for thousands
-      of years. His generosity is so narrow to only one person. The one he swore
-      with all his might must return the blood of the great forest one day.
-    sprite: {fileID: 21300000, guid: 37b3b26b2f5cab645896d68b9c3181c5, type: 3}
-    hp: 200
-    atk: 20
-    prt: 20
-    skills:
-    - skillName: Commandments of the Ancients
-      description: ABC
-      cooldown: 1
-    - skillName: 'Clove  '
-      description: ABC
-      cooldown: 1
-    - skillName: Retribution from the Great Forest
-      description: ABC
-      cooldown: 3
-  - characterName: Fire Jar
-    description: 'He was a man who knew neither anger nor hatred, he had thought.
-      Until gangs of bandits, after killing his wife, threw him into a pool of lava,
-      his rage raging and hotter than lava. He frantically swept everything to relieve
-      his hatred. Will he be able to escape this form by doing so? '
-    sprite: {fileID: 21300000, guid: 819c032effcfb2c48a10e3d27ba3c2af, type: 3}
-    hp: 300
-    atk: 30
-    prt: 30
-    skills:
-    - skillName: Damning Burn
-      description: ABC
-      cooldown: 1
-    - skillName: Burst from the Ashes
-      description: ABC
-      cooldown: 3
-    - skillName: 'Fire of Delight '
-      description: ABC
-      cooldown: 1
-  - characterName: Giant Unicell
-    description: 'It doesn''t know what it is. It only knows a few things through
-      the people or things it has absorbed. Those memories and even its ability itself
-      told that it was a cell of a giant immortal being. '
-    sprite: {fileID: 21300000, guid: 5dda7badc49d32744aee2ee6ecc19316, type: 3}
-    hp: 400
-    atk: 40
-    prt: 40
-    skills:
-    - skillName: Cell Reunion
-      description: ABC
-      cooldown: 1
-    - skillName: 'See Through Heart '
-      description: ABC
-      cooldown: 1
-    - skillName: Pain Digestion
-      description: ABC
-      cooldown: 1
-  - characterName: Servant Bot
-    description: His owner was a wealthy but miserly collector. He is so afraid of
-      betrayal that all the servants in his mansion are robots. However, he could
-      not have imagined that the fire of greed sprang up in the eyes of an inanimate
-      robot. That mechanical servant stole one of the most valuable treasures, the
-      Compass of Fate.
-    sprite: {fileID: 21300000, guid: cce227b8f5783e64ab8c9368a0f6aedf, type: 3}
-    hp: 500
-    atk: 50
-    prt: 50
-    skills:
-    - skillName: 'Fortune smiles upon fools '
-      description: ABC
-      cooldown: 1
-    - skillName: 'Back to old ways '
-      description: ABC
-      cooldown: 2
-    - skillName: "Murphy\u2019s Insurance"
-      description: ABC
-      cooldown: 5
-  currentCharacterIndex: 0
---- !u!4 &2036546943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036546941}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2069664834
 PrefabInstance:
   m_ObjectHideFlags: 0
