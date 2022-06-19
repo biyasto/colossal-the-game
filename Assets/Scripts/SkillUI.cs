@@ -15,4 +15,11 @@ public class SkillUI : MonoBehaviour
         description.text = skill.description;
         cooldown.text = skill.cooldown.ToString();
     }
+
+    public void SetSkillUIDefault()
+    {
+        skillName.text = "Skill Name";
+        description.text = "This is skill description...";
+        cooldown.text = "?";
+    }
 }

@@ -1493,7 +1493,7 @@ MonoBehaviour:
   localScale: 0.5
   defaultAlpha: 0.75
   isShowAll: 0
-  mainMenuScene: MainMenuScene
+  showAllButton: {fileID: 1837629839}
 --- !u!4 &1294905864
 Transform:
   m_ObjectHideFlags: 0

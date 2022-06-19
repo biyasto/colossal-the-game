@@ -33,12 +33,13 @@ public class CharacterUI : MonoBehaviour
     private int currentCharacterIndex = 0;
 
     [Header("Buttons")]
-    public string mainMenuScene = "MainMenuScene";
+    private string mainMenuScene = "TitleScreen";
+    public Button showAllButton;
 
     private void Start()
     {
         Inventory.Initialize();
-        characters = Inventory.characters;
+        characters = Inventory.ownedCharacters;
         SetCharacterUI(0);
     }
 
@@ -68,6 +69,19 @@ public class CharacterUI : MonoBehaviour
             SetDefaultCharacter(preCharacter);
             SetDefaultCharacter(curCharacter);
             SetDefaultCharacter(nextCharacter);
+
+            characterName.text = "Character Name";
+            description.text = "This is character description...";
+
+            hp.text = "??? HP";
+            atk.text = "??";
+            prt.text = "??";
+
+            foreach (var skillUI in skillUIs)
+            {
+                skillUI.SetSkillUIDefault();
+            }
+
             return;
         }
 
@@ -81,6 +95,7 @@ public class CharacterUI : MonoBehaviour
         prt.text = character.prt.ToString();
 
         curCharacter.sprite = character.sprite;
+        curCharacter.transform.localScale = new Vector3(1, 1, 1);
 
         if (characterIndex != 0)
         {
@@ -140,10 +155,12 @@ public class CharacterUI : MonoBehaviour
         if (isShowAll)
         {
             characters = Inventory.characters;
+            showAllButton.GetComponentInChildren<TMP_Text>().text = "Owned";
         }
         else
         {
             characters = Inventory.ownedCharacters;
+            showAllButton.GetComponentInChildren<TMP_Text>().text = "Show All";
         }
 
         SetCharacterUI(currentCharacterIndex);

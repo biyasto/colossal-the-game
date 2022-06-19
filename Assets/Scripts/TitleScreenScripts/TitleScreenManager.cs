@@ -196,4 +196,9 @@ public class TitleScreenManager : MonoBehaviour
         tempColor.a = 1.0f;
         image.color = tempColor;
     }
+
+    public void SwitchToInventoryScene()
+    {
+        SceneManager.LoadScene("InventoryScene");
+    }
 }

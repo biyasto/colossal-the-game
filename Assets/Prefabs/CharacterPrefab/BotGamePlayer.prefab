@@ -117,7 +117,11 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   unitName: Servent Bot
-  description: 
+  description: His owner was a wealthy but miserly collector. He is so afraid of
+    betrayal that all the servants in his mansion are robots. However, he could not
+    have imagined that the fire of greed sprang up in the eyes of an inanimate robot.
+    That mechanical servant stole one of the most valuable treasures, the Compass
+    of Fate.
   maxHp: 400
   currentHp: 400
   atk: 25
