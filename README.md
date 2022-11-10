@@ -1,5 +1,5 @@
 # Colossal
-LAN-Multiplayer gameTurnbased Game use NFT as playable characters
+LAN-Multiplayer Turnbased Game use NFT as playable characters
  
  # Technology
 [Unity](https://unity3d.com/)
