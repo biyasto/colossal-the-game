@@ -1,4 +1,4 @@
-# Game-Turn-based
+# Colossal
 LAN-Multiplayer gameTurnbased Game use NFT as playable characters
  
  # Technology
